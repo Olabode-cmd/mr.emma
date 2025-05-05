@@ -84,6 +84,77 @@ export const portfolioData = [
         ],
         results: "Achieved a 40% increase in daily user engagement over the first 3 months post-launch.",
         projectLink: "https://naomicreates.co.za/empowering-natural-hair-journeys-with-a-personalised-diary-app/",
+        researchMethods: ["User Interviews", "Surveys", "Usability Testing", "Competitor Analysis"],
+        keyFindings: [
+            "90% of users wanted personalized product recommendations",
+            "Users preferred visual progress tracking over text-based",
+            "Community features were highly requested",
+            "Weekly reminders increased engagement by 45%"
+        ],
+        designProcess: [
+            {
+                phase: "Research",
+                description: "Conducted 20+ user interviews and analyzed competitor apps",
+                duration: "4 weeks"
+            },
+            {
+                phase: "Ideation",
+                description: "Created user flows and wireframes for key features",
+                duration: "3 weeks"
+            },
+            {
+                phase: "Design",
+                description: "Developed high-fidelity mockups and interactive prototypes",
+                duration: "6 weeks"
+            },
+            {
+                phase: "Testing",
+                description: "Conducted usability testing with 15 participants",
+                duration: "3 weeks"
+            }
+        ],
+        metrics: {
+            userRetention: "85% after 3 months",
+            appStoreRating: 4.8,
+            averageSessionDuration: "12 minutes",
+            userGrowth: "10k+ monthly active users"
+        },
+        keyFeatures: [
+            {
+                name: "Smart Hair Journal",
+                description: "AI-powered tracking system for hair growth and health"
+            },
+            {
+                name: "Product Scanner",
+                description: "Barcode scanning for instant product compatibility check"
+            },
+            {
+                name: "Progress Gallery",
+                description: "Visual timeline with AR measurement tools"
+            }
+        ],
+        challenges: [
+            {
+                challenge: "Complex User Demographics",
+                solution: "Implemented adaptive UI based on hair type and goals"
+            },
+            {
+                challenge: "Data Privacy Concerns",
+                solution: "Developed robust encryption and anonymous tracking options"
+            }
+        ],
+        testimonials: [
+            {
+                quote: "This app has completely transformed my natural hair journey",
+                author: "Sarah M.",
+                role: "Beta User"
+            }
+        ],
+        nextSteps: [
+            "Implement AR try-on features for hairstyles",
+            "Expand product database",
+            "Add community marketplace"
+        ]
     },
     {
         id: "wellness-platform-redesign",
@@ -105,6 +176,83 @@ export const portfolioData = [
         ],
         results: "User retention improved by 55%, and session durations increased by 30%.",
         projectLink: "https://naomicreates.co.za/redefining-user-experience-for-a-wellness-platform",
+        researchMethods: [
+            "Heatmap Analysis",
+            "User Journey Mapping",
+            "A/B Testing",
+            "User Interviews",
+            "Analytics Review"
+        ],
+        keyFindings: [
+            "73% of users dropped off during meditation setup",
+            "Users wanted more visual feedback during sessions",
+            "Mobile usage was higher than desktop (82%)",
+            "Gamification elements increased engagement significantly"
+        ],
+        designProcess: [
+            {
+                phase: "Discovery",
+                description: "Analyzed user behavior data and conducted stakeholder interviews",
+                duration: "2 weeks"
+            },
+            {
+                phase: "User Research",
+                description: "Interviewed 25 users and mapped out pain points",
+                duration: "3 weeks"
+            },
+            {
+                phase: "Prototyping",
+                description: "Created and tested multiple interface iterations",
+                duration: "4 weeks"
+            },
+            {
+                phase: "Implementation",
+                description: "Worked with developers to ensure design fidelity",
+                duration: "7 weeks"
+            }
+        ],
+        metrics: {
+            userRetention: "92% after 1 month",
+            meditationCompletions: "+168%",
+            userSatisfaction: "4.9/5",
+            dailyActiveUsers: "25k+"
+        },
+        keyFeatures: [
+            {
+                name: "Adaptive Interface",
+                description: "UI that adjusts based on user's meditation experience level"
+            },
+            {
+                name: "Progress Visualization",
+                description: "Interactive charts showing mindfulness journey"
+            },
+            {
+                name: "Smart Recommendations",
+                description: "AI-powered meditation suggestions based on mood and time"
+            }
+        ],
+        challenges: [
+            {
+                challenge: "High Cognitive Load",
+                solution: "Implemented progressive disclosure in the interface"
+            },
+            {
+                challenge: "User Motivation",
+                solution: "Added micro-rewards and streak tracking system"
+            }
+        ],
+        testimonials: [
+            {
+                quote: "The new design makes meditation feel less intimidating and more inviting",
+                author: "Michael R.",
+                role: "Premium User"
+            }
+        ],
+        nextSteps: [
+            "Integrate social features for community building",
+            "Develop offline mode for retreats",
+            "Add voice-guided navigation option"
+        ]
     },
     {
         id: "ecommerce-fashion-platform",
@@ -126,5 +274,82 @@ export const portfolioData = [
         ],
         results: "Sales conversion rate increased by 25% within the first quarter after launch.",
         projectLink: "https://naomicreates.co.za/revamping-fashion-ecommerce-with-a-user-centered-approach",
+        researchMethods: [
+            "Cart Abandonment Analysis",
+            "Customer Journey Mapping",
+            "Conversion Funnel Analysis",
+            "User Testing Sessions",
+            "Competitive Analysis"
+        ],
+        keyFindings: [
+            "Mobile checkout completion was 40% lower than desktop",
+            "Size guide was difficult to find and understand",
+            "Users wanted more product views and styling options",
+            "Payment options were not clearly visible"
+        ],
+        designProcess: [
+            {
+                phase: "Analysis",
+                description: "Deep dive into analytics and user behavior patterns",
+                duration: "3 weeks"
+            },
+            {
+                phase: "UX Strategy",
+                description: "Developed new user flows and navigation structure",
+                duration: "4 weeks"
+            },
+            {
+                phase: "UI Design",
+                description: "Created new design system and component library",
+                duration: "6 weeks"
+            },
+            {
+                phase: "Testing",
+                description: "Conducted A/B tests and user validation",
+                duration: "3 weeks"
+            }
+        ],
+        metrics: {
+            cartCompletion: "78% increase",
+            mobileConversion: "+45%",
+            averageOrderValue: "+32%",
+            returnCustomers: "65%"
+        },
+        keyFeatures: [
+            {
+                name: "Smart Size Finder",
+                description: "AI-powered size recommendation based on previous purchases"
+            },
+            {
+                name: "Quick Checkout",
+                description: "One-page checkout with smart autofill and saved preferences"
+            },
+            {
+                name: "Virtual Try-On",
+                description: "AR-based feature to visualize outfits before purchase"
+            }
+        ],
+        challenges: [
+            {
+                challenge: "Complex Product Variations",
+                solution: "Implemented intuitive size and color selection matrix"
+            },
+            {
+                challenge: "Mobile Performance",
+                solution: "Developed progressive loading and image optimization"
+            }
+        ],
+        testimonials: [
+            {
+                quote: "Shopping is so much easier now, especially on my phone!",
+                author: "Emma T.",
+                role: "Regular Customer"
+            }
+        ],
+        nextSteps: [
+            "Implement personalized shopping feeds",
+            "Add social shopping features",
+            "Develop sustainable fashion filter"
+        ]
     },
 ];

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { userData } from "./data/data";
+import User from './assets/mr.emma.jpg';
 
 const AboutPage = () => {
   return (
@@ -32,7 +33,6 @@ const AboutHeroSection = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left column: Text content */}
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {userData.name}
@@ -88,14 +88,13 @@ const AboutHeroSection = () => {
             </Link>
           </div>
 
-          {/* Right column: Image */}
           <div className="flex justify-center">
             <div className="relative">
               <div className="absolute inset-0 -m-4 bg-purple-200 rounded-full blur-md opacity-70"></div>
               <img
-                src="/api/placeholder/500/500"
+                src={User}
                 alt={userData.name}
-                className="w-full max-w-md rounded-full relative z-10 border-4 border-white shadow-xl"
+                className="w-full max-w-md rounded-md relative z-10 shadow-sm"
               />
             </div>
           </div>

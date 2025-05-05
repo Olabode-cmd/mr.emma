@@ -43,10 +43,10 @@ const Navbar = () => {
                   <path d="M20 32L32 20" stroke="#6B46C1" strokeWidth="2" />
                 </svg>
               </div>
-              <div className="flex flex-col">
+              <Link to="/" className="flex flex-col">
                 <span className="text-xs text-gray-500">Mr.Emma</span>
                 <span className="font-bold text-gray-800">UI/UX Designer</span>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="hidden md:block">
@@ -62,12 +62,6 @@ const Navbar = () => {
                 className="text-gray-800 hover:text-purple-600 transition font-medium"
               >
                 Projects
-              </Link>
-              <Link
-                to="/contact"
-                className="text-gray-800 hover:text-purple-600 transition font-medium"
-              >
-                Contact
               </Link>
             </div>
           </div>

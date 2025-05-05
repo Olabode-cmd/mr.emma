@@ -1,11 +1,17 @@
-import { StrictMode } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css'
 
 // AOS imports
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import App from './App.jsx'
+import AboutPage from './about.jsx'
+import Portfolio from './pages/Portfolio.jsx'
+import CaseStudy from './pages/CaseStudy.jsx'
+import ScrollToTop from './components/ScrollToTop'
 
 // Initialize AOS
 AOS.init({
@@ -13,17 +19,17 @@ AOS.init({
   once: false,
 });
 
-import App from './App.jsx'
-import AboutPage from './about.jsx'
-
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <StrictMode>
-    <BrowserRouter>
+  <React.StrictMode>
+    <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:id" element={<CaseStudy />} />
       </Routes>
-    </BrowserRouter>
-  </StrictMode>,
+    </Router>
+  </React.StrictMode>
 )
