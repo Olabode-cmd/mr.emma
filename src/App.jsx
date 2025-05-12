@@ -92,31 +92,31 @@ const BioSection = () => {
 
 const PortfolioSection = () => {
   return (
-    <div id="portfolio" className="bg-gray-900 py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <div id="portfolio" className="bg-gray-100 py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
           <h2 
             data-aos="fade-up" 
-            className="text-4xl font-bold text-white mb-4"
+            className="text-5xl font-bold text-gray-900 mb-6"
           >
             Featured Projects
           </h2>
           <p 
             data-aos="fade-up" 
-            className="text-gray-400 max-w-2xl mx-auto"
+            className="text-gray-600 text-lg max-w-2xl mx-auto"
           >
             Here are some of the projects I've worked on.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="space-y-24">
           {portfolioData.map((project, index) => (
             <div
               key={project.id}
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <PortfolioCard project={project} />
+              <PortfolioCard project={project} isReversed={index % 2 !== 0} />
             </div>
           ))}
         </div>

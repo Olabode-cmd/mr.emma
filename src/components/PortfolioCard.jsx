@@ -1,74 +1,49 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PortfolioCard = ({ project }) => {
+const PortfolioCard = ({ project, isReversed }) => {
   return (
-    <div className="group h-full flex flex-col relative overflow-hidden rounded-xl bg-gray-800 transition-all duration-300 hover:shadow-2xl">
-      <div className="relative h-64 flex-shrink-0 overflow-hidden">
+    <div className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className={`relative overflow-hidden rounded-2xl ${isReversed ? 'lg:order-last' : ''}`}>
         <img
           src={project.heroImage}
           alt={project.title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
 
-      <div className="relative p-6 flex-grow flex flex-col">
-        <span className="inline-block rounded-full bg-purple-600/10 px-3 py-1 text-sm font-medium text-purple-400 w-fit">
+      <div className={`flex flex-col ${isReversed ? 'lg:pr-12' : 'lg:pl-12'}`}>
+        <span className="px-3 py-1 text-sm font-medium text-purple-700 bg-purple-50 rounded-full w-fit mb-6">
           {project.projectType}
         </span>
 
-        <h3 className="mt-4 text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">
           {project.title}
         </h3>
 
-        <p className="mt-3 text-gray-400 line-clamp-3 flex-grow">
-          {project.description}
+        <p className="text-gray-600 text-lg mb-8">
+          {project.overview.summary}
         </p>
 
-        <div className="mt-6 flex items-center justify-between">
-          <Link
-            to={`/portfolio/${project.id}`}
-            className="group/link inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300"
+        <Link
+          to={`/portfolio/${project.id}`}
+          className="inline-flex items-center text-purple-700 font-medium hover:text-purple-900 transition-colors duration-300 mt-auto group/link"
+        >
+          View Case Study
+          <svg
+            className="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover/link:translate-x-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            View Case Study
-            <svg
-              className="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover/link:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </Link>
-          {project.projectLink && (
-            <a
-              href={project.projectLink}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-400 hover:text-purple-300 transition-colors duration-300"
-            >
-              <svg
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </a>
-          )}
-        </div>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </Link>
       </div>
     </div>
   );

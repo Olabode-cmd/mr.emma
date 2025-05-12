@@ -1,281 +1,386 @@
 import React from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import { portfolioData } from '../data/data';
+import { useParams } from 'react-router-dom';
+import { portfolioData } from '../data/portfolioData';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 const CaseStudy = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
-  
   const project = portfolioData.find(p => p.id === id);
   
   if (!project) {
-    navigate('/portfolio');
-    return null;
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <div className="flex-grow flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Project Not Found</h1>
+            <p className="text-gray-600">The project you're looking for doesn't exist or has been moved.</p>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
   }
 
   return (
-    <div className="font-sans">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="min-h-screen bg-gray-900">
-        <div className="relative">
-          <div className="h-[80vh] relative">
-            <img
-              src={project.heroImage}
-              alt={project.title}
-              className="w-full h-full object-cover"
+      <main className="flex-grow">
+        <div className="bg-white">
+          {/* Hero Section */}
+          <div className="relative h-[80vh] overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${project.heroImage})`,
+                backgroundPosition: 'center',
+              }}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-gray-900"></div>
-          </div>
-
-          {/* Project Info Overlay */}
-          <div className="absolute bottom-0 left-0 right-0">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-              <div className="flex flex-wrap items-center gap-4 mb-6">
-                <span className="inline-block rounded-full bg-purple-600/70 px-4 py-1.5 text-sm font-medium text-gray-100">
-                  {project.projectType}
-                </span>
-                <span className="inline-block rounded-full bg-gray-700/50 px-4 py-1.5 text-sm font-medium text-gray-300">
-                  {project.duration}
-                </span>
-                <span className="inline-block rounded-full bg-gray-700/50 px-4 py-1.5 text-sm font-medium text-gray-300">
-                  {project.client}
-                </span>
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-800/40 to-gray-900/80" />
+            <div className="absolute inset-0 flex items-center">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+                  {project.title}
+                </h1>
+                <p className="text-xl text-gray-200 max-w-3xl">
+                  {project.overview.summary}
+                </p>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                {project.title}
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl">
-                {project.description}
-              </p>
             </div>
           </div>
-        </div>
 
-        {/* Quick Stats */}
-        {project.metrics && (
-          <div className="bg-gray-800 py-12 mt-8">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {Object.entries(project.metrics).map(([key, value]) => (
-                  <div key={key} className="text-center">
-                    <p className="text-3xl font-bold text-purple-400 mb-2">{value}</p>
-                    <p className="text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+          {/* Main Content */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            {/* Project Overview */}
+            <section className="mb-20">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="md:col-span-2">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Project Overview</h2>
+                  <div className="space-y-8">
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">The Problem</h3>
+                      <p className="text-gray-600">{project.overview.problem}</p>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">The Goal</h3>
+                      <p className="text-gray-600">{project.overview.goal}</p>
+                    </div>
                   </div>
-                ))}
+                </div>
+                <div className="bg-gray-50 p-8 rounded-xl">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6">Project Details</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-sm text-gray-500">Duration</p>
+                      <p className="text-gray-900 font-medium">{project.overview.duration}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-500">Role</p>
+                      <p className="text-gray-900 font-medium">{project.role.title}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        )}
+            </section>
 
-        {/* Main Content */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">My Role</h3>
-              <div className="flex flex-wrap gap-3">
-                {project.role.map((role, index) => (
-                  <span
+            {/* My Role */}
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">My Role</h2>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {project.role.responsibilities.map((responsibility, index) => (
+                  <li 
                     key={index}
-                    className="px-4 py-2 bg-gray-800 rounded-lg text-gray-300"
+                    className="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg"
                   >
-                    {role}
-                  </span>
+                    <span className="text-purple-600 mt-1">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-gray-700">{responsibility}</span>
+                  </li>
                 ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Tools Used</h3>
-              <div className="flex flex-wrap gap-3">
-                {project.tools.map((tool, index) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-gray-800 rounded-lg text-gray-300"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+              </ul>
+            </section>
 
-          {/* Design Process */}
-          {project.designProcess && (
-            <div className="mb-20">
-              <h2 className="text-3xl font-bold text-white mb-12">Design Process</h2>
-              <div className="relative">
-                <div className="absolute left-8 top-0 bottom-0 w-px bg-gray-800"></div>
-                <div className="space-y-12">
-                  {project.designProcess.map((phase, index) => (
-                    <div key={index} className="relative pl-20">
-                      <div className="absolute left-7 w-3 h-3 bg-purple-500 rounded-full transform -translate-x-1/2"></div>
-                      <div className="bg-gray-800 rounded-xl p-6">
-                        <div className="flex items-start justify-between mb-4">
-                          <h3 className="text-xl font-bold text-white">{phase.phase}</h3>
-                          <span className="text-sm text-purple-400">{phase.duration}</span>
-                        </div>
-                        <p className="text-gray-400">{phase.description}</p>
+            {/* User Research */}
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">User Research</h2>
+              <div className="space-y-12">
+                <div>
+                  <p className="text-gray-600 mb-8">{project.userResearch.summary}</p>
+                  
+                  {/* Pain Points */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    {project.userResearch.painPoints.map((userType, index) => (
+                      <div key={index} className="bg-gray-50 p-6 rounded-xl">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                          {userType.user}
+                        </h3>
+                        <ul className="space-y-3">
+                          {userType.points.map((point, pointIndex) => (
+                            <li key={pointIndex} className="flex items-start space-x-3">
+                              <span className="text-red-500 mt-1">
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                              </span>
+                              <span className="text-gray-700">{point}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
+                    ))}
+                  </div>
+
+                  {/* Personas */}
+                  <div className="mb-12">
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">User Personas</h3>
+                    <div className="max-w-5xl mx-auto">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {project.userResearch.personas.map((persona, index) => (
+                          <div key={index} className="bg-white shadow-lg rounded-xl overflow-hidden">
+                            <img 
+                              src={persona.image} 
+                              alt={persona.name}
+                              className="w-full h-48 object-cover"
+                            />
+                            <div className="p-6">
+                              <h4 className="text-xl font-semibold text-gray-900 mb-2">{persona.name}</h4>
+                              <p className="text-purple-600 text-sm font-medium mb-4">{persona.type}</p>
+                              <p className="text-gray-600 mb-4">{persona.description}</p>
+                              <div>
+                                <h5 className="text-sm font-semibold text-gray-900 mb-2">Goals</h5>
+                                <ul className="space-y-2">
+                                  {persona.goals.map((goal, goalIndex) => (
+                                    <li key={goalIndex} className="flex items-center space-x-2 text-gray-700">
+                                      <span className="text-purple-600">•</span>
+                                      <span>{goal}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* User Journey Map */}
+                  <div>
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">User Journey Map</h3>
+                    <div className="bg-white shadow-lg rounded-xl overflow-hidden">
+                      <img 
+                        src={project.userResearch.userJourneyMap.image}
+                        alt="User Journey Map"
+                        className="w-full h-auto"
+                      />
+                      <p className="p-6 text-gray-600 bg-gray-50">
+                        {project.userResearch.userJourneyMap.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Design Process */}
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Design Process</h2>
+              
+              {/* Paper Wireframes */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Paper Wireframes</h3>
+                <p className="text-gray-600 mb-6 max-w-3xl">{project.designProcess.paperWireframes.description}</p>
+                <div className="max-w-6xl mx-auto">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {project.designProcess.paperWireframes.images.map((image, index) => (
+                      <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-lg">
+                        <img 
+                          src={image}
+                          alt={`Paper wireframe ${index + 1}`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Digital Wireframes */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Wireframes</h3>
+                <p className="text-gray-600 mb-6 max-w-3xl">{project.designProcess.digitalWireframes.description}</p>
+                <div className="max-w-6xl mx-auto">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {project.designProcess.digitalWireframes.images.map((image, index) => (
+                      <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-lg">
+                        <img 
+                          src={image}
+                          alt={`Digital wireframe ${index + 1}`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Low-Fidelity Prototype */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Low-Fidelity Prototype</h3>
+                <p className="text-gray-600 mb-6 max-w-3xl">{project.designProcess.lowFidelityPrototype.description}</p>
+                <div className="max-w-6xl mx-auto">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-4">
+                    {project.designProcess.lowFidelityPrototype.images.map((image, index) => (
+                      <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-lg">
+                        <img 
+                          src={image}
+                          alt={`Low-fidelity prototype ${index + 1}`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <a 
+                  href={project.designProcess.lowFidelityPrototype.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-purple-600 hover:text-purple-700"
+                >
+                  View Prototype
+                  <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+
+              {/* Usability Studies */}
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Usability Studies Findings</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {project.designProcess.usabilityStudies.findings.map((finding, index) => (
+                    <div 
+                      key={index}
+                      className="p-6 bg-gray-50 rounded-xl"
+                    >
+                      <p className="text-gray-700">{finding}</p>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
-          )}
+            </section>
 
-          {/* Research Methods & Key Findings */}
-          {project.researchMethods && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Research Methods</h3>
-                <ul className="space-y-4">
-                  {project.researchMethods.map((method, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <svg className="w-5 h-5 text-purple-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {method}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Key Findings</h3>
-                <ul className="space-y-4">
-                  {project.keyFindings.map((finding, index) => (
-                    <li key={index} className="flex items-start text-gray-300">
-                      <svg className="w-5 h-5 text-purple-400 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                      {finding}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-
-          {/* Key Features */}
-          {project.keyFeatures && (
-            <div className="mb-20">
-              <h2 className="text-3xl font-bold text-white mb-12">Key Features</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {project.keyFeatures.map((feature, index) => (
-                  <div key={index} className="bg-gray-800 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">{feature.name}</h3>
-                    <p className="text-gray-400">{feature.description}</p>
-                  </div>
+            {/* Refined Designs */}
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Refined Designs</h2>
+              <p className="text-gray-600 mb-8">{project.refinedDesigns.description}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {project.refinedDesigns.images.map((image, index) => (
+                  <img 
+                    key={index}
+                    src={image}
+                    alt={`Refined design ${index + 1}`}
+                    className="rounded-lg shadow-lg"
+                  />
                 ))}
               </div>
-            </div>
-          )}
+            </section>
 
-          {/* Challenges & Solutions */}
-          {project.challenges && (
-            <div className="mb-20">
-              <h2 className="text-3xl font-bold text-white mb-12">Challenges & Solutions</h2>
-              <div className="space-y-8">
-                {project.challenges.map((item, index) => (
-                  <div key={index} className="bg-gray-800 rounded-xl p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div>
-                        <h3 className="text-xl font-bold text-white mb-4">Challenge</h3>
-                        <p className="text-gray-400">{item.challenge}</p>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white mb-4">Solution</h3>
-                        <p className="text-gray-400">{item.solution}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Testimonials */}
-          {project.testimonials && (
-            <div className="mb-20">
-              <h2 className="text-3xl font-bold text-white mb-12">User Feedback</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {project.testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-gray-800 rounded-xl p-8">
-                    <svg className="w-8 h-8 text-purple-400 mb-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                    </svg>
-                    <p className="text-xl text-gray-300 italic mb-6">{testimonial.quote}</p>
-                    <div>
-                      <p className="text-white font-medium">{testimonial.author}</p>
-                      <p className="text-gray-400">{testimonial.role}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Next Steps */}
-          {project.nextSteps && (
-            <div className="mb-20">
-              <h2 className="text-3xl font-bold text-white mb-12">What's Next</h2>
-              <div className="bg-gray-800 rounded-xl p-8">
-                <ul className="space-y-4">
-                  {project.nextSteps.map((step, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <svg className="w-5 h-5 text-purple-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                      {step}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-
-          {/* Project Images */}
-          {project.images && (
-            <div className="mb-20">
-              <h2 className="text-3xl font-bold text-white mb-12">Project Gallery</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {project.images.map((image, index) => (
-                  <div key={index} className="relative aspect-video rounded-xl overflow-hidden">
-                    <img
-                      src={image}
-                      alt={`Project screenshot ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Navigation */}
-          <div className="mt-20 border-t border-gray-800 pt-8">
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300"
-            >
-              <svg
-                className="mr-2 h-4 w-4 transform rotate-180"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+            {/* High-Fidelity Prototype */}
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">High-Fidelity Prototype</h2>
+              <p className="text-gray-600 mb-8">{project.highFidelityPrototype.description}</p>
+              <div className="mb-6">
+                <img 
+                  src={project.highFidelityPrototype.screenshot}
+                  alt="High-fidelity prototype screenshot"
+                  className="rounded-lg shadow-lg w-full"
                 />
-              </svg>
-              Back to Portfolio
-            </Link>
+              </div>
+              <a 
+                href={project.highFidelityPrototype.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-purple-600 hover:text-purple-700"
+              >
+                View Prototype
+                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </section>
+
+            {/* Accessibility Considerations */}
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Accessibility Considerations</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {project.accessibilityConsiderations.map((consideration, index) => (
+                  <div 
+                    key={index}
+                    className="p-6 bg-gray-50 rounded-xl"
+                  >
+                    <p className="text-gray-700">{consideration}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Takeaways */}
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Takeaways</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Lessons Learned</h3>
+                  <ul className="space-y-4">
+                    {project.takeaways.lessons.map((lesson, index) => (
+                      <li 
+                        key={index}
+                        className="flex items-start space-x-3"
+                      >
+                        <span className="text-purple-600 mt-1">
+                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </span>
+                        <span className="text-gray-700">{lesson}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Next Steps</h3>
+                  <ul className="space-y-4">
+                    {project.takeaways.nextSteps.map((step, index) => (
+                      <li 
+                        key={index}
+                        className="flex items-start space-x-3"
+                      >
+                        <span className="text-purple-600 mt-1">
+                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        </span>
+                        <span className="text-gray-700">{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Conclusion */}
+            <section className="bg-gray-50 rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
+              <p className="text-gray-600 mb-8">{project.conclusion.summary}</p>
+              <p className="text-gray-700 font-medium">{project.conclusion.connect}</p>
+            </section>
           </div>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );

@@ -44,7 +44,7 @@ const Navbar = () => {
                 </svg>
               </div>
               <Link to="/" className="flex flex-col">
-                <span className="text-xs text-gray-500">Mr.Emma</span>
+                <span className="text-xs text-gray-800">Mr.Emma</span>
                 <span className="font-bold text-gray-800">UI/UX Designer</span>
               </Link>
             </div>
