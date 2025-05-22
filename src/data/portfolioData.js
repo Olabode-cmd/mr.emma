@@ -213,7 +213,7 @@ export const portfolioData = [
             {
                 name: "Samantha",
                 type: "Parent",
-                image: Samantha,
+                image: DixanAfterSchool,
                 description: "Samantha is a career-driven single mother with a demanding schedule who needs a quick and reliable way to enroll her daughter in an after-school program because she often struggles to balance work commitments with ensuring her child's safety and care. ",
                 goals: [
                     "Find reliable after-school care", 
