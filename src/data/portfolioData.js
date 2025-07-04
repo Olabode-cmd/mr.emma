@@ -349,5 +349,144 @@ export const portfolioData = [
         summary: "The Dixan After-School Program app transformed frustration into relief by creating an intuitive platform that makes enrolling children in after-school programs as easy as ordering a ride, bringing convenience to busy parents and those with accessibility needs.",
         connect: "Interested in learning more about this project or discussing similar challenges? Let's connect and explore how we can create impactful digital solutions together."
     }
+},
+{
+    id: "verbumdei_ui_admin",
+    title: "Verbum Dei Academy Admin Portal",
+    heroImage: "VerbumDeiPortalCover",
+    
+    overview: {
+        duration: "September 2024 – January 2025",
+        summary: "A modern web admin portal designed for Verbum Dei Academy to centralize and streamline academic operations. This visual overhaul focused on clarity, responsiveness, and consistency across student, staff, and event management systems. As the UI Designer, I created a visually coherent system with modular dashboards, clean typography, and intuitive interactions that elevated staff workflow efficiency.",
+        project: "School administrators used disconnected systems for managing students, teachers, attendance, and events. I was tasked with building a UI that unified all admin tools under one intuitive interface, supported by a scalable design system.",
+        problem: "Staff experienced friction using outdated and inconsistent tools that lacked structure, flexibility, and visual feedback.",
+        goal: "Design a sleek, structured, and accessible UI that simplifies admin workflows and improves overall operational efficiency."
+    },
+
+    role: {
+        title: "UI Designer",
+        responsibilities: [
+            "Established a reusable design system in Figma with over 40 components",
+            "Designed responsive dashboard layouts for desktop and tablet",
+            "Created pixel-perfect prototypes with micro-interactions and visual feedback states",
+            "Defined icon usage, spacing rules, button states, form patterns",
+            "Collaborated with developers to maintain UI fidelity using Figma specs"
+        ]
+    },
+
+    designProcess: {
+        wireframes: {
+            description: "I started with low-fidelity layout exploration for dashboard composition. I applied an 8pt spacing system and a 12-column grid to maintain visual balance and modular scaling. All primary views were tested at 1440px and 1024px breakpoints.",
+            tools: ["Figma", "Miro", "Zeplin"],
+            images: ["Wireframe_VDA_Dashboard", "Wireframe_VDA_Scheduler"]
+        },
+        designSystem: {
+            description: "The system was built around atomic design principles—atoms (buttons, inputs), molecules (form groups, nav cards), and organisms (payment report charts, attendance table, student table). Components were nested using Auto Layout and constraints for full responsiveness.",
+            foundations: {
+                typography: {
+                    primaryFont: "Lato",
+                    scale: "14px, 16px, 18px, 24px, 36px",
+                    lineHeight: "1.4–1.6em",
+                    usage: "Bold for headers, medium for body, monospace for data fields"
+                },
+                colors: {
+                    primary: "#007BFF",
+                    accent: "#F47B20",
+                    success: "#1BAA5F",
+                    textPrimary: "#333333",
+                    textSecondary: "#656466",
+                    error: "#DE3B3B",
+                    backgrounds: ["#FFFFFF", "#F6F8FB"],
+                    contrast: "Maintained WCAG AA with 4.5:1 or better"
+                },
+                iconography: {
+                    library: "Material + Vuesax + custom icons + SVG",
+                    rules: "16px/24px sizes, 1.5px stroke weight, 8px padding buffer"
+                },
+                buttons: {
+                    variants: ["Primary", "Secondary", "Ghost", "Danger"],
+                    states: ["Default", "Hover", "Active", "Disabled"]
+                }
+            },
+            components: [
+                "Calendar module with event highlight logic",
+                "Attendance table with column filtering and hover states",
+                "Sidebar navigation with active indicators and collapsibles",
+                "Fees payment charts"
+            ]
+        },
+        lowFidelityPrototype: {
+            description: "Prototype tested the placement of core components and navigation logic. All interactive regions followed a consistent click area size of 44x44px for accessibility.",
+            link: "https://www.figma.com/proto/verbumdei-admin-low-fi",
+            images: ["Proto_Overview_VDA"]
+        },
+        usabilityFeedback: {
+            overview: "The usability testing focused on three core modules: student management, teacher management, and fee payment. Feedback was gathered through guided tasks performed by four admin users, followed by short interviews.",
+            findings: [
+                {
+                    feature: "Student Management",
+                    issue: "Users struggled to locate the 'Edit Profile' button for individual students from the list view.",
+                    solution: "We position the action at the upper right of the profile page and stick on scroll and add clear tooltips with labels like 'Edit Student', 'View Details', and 'Assign to Class'."
+                },
+                {
+                    feature: "Fee Payment",
+                    issue: "The initial layout of the fee history table lacked filters and felt overwhelming with too many columns.",
+                    solution: "Redesigned the fee history section with collapsible rows, added quick filters for 'Paid', 'Pending', and 'Overdue', and emphasized the current term summary at the top using card layouts."
+                }
+            ],
+            insight: "These feedback loops informed refinements in component clarity, interaction proximity, and visual hierarchy—ultimately reducing cognitive load and making high-frequency tasks more intuitive for school staff."
+        },
+        finalDesign: {
+            features: [
+                "Hierarchical dashboard with smart cards and collapsible sections",
+                "Sticky filters on scroll in tables",
+                "Responsive 12-column grid with breakpoint-specific paddings",
+                "Microinteraction feedback on hover, click, success states"
+            ],
+            visualHighlights: [
+                "Vertical spacing system ensures visual rhythm across sections",
+                "Consistency enforced with global color tokens and typography rules",
+                "Dynamic UI elements like date pickers and progress steps use smooth 150ms easing transitions"
+            ],
+            images: [
+                "Dashboard_Final_UI",
+                "Attendance_UI_Table",
+                "Fees payment chart",
+                "DesignSystem_Tokens_UI"
+            ]
+        }
+    },
+
+    highFidelityPrototype: {
+        description: "Built using Figma's interactive components, hover states, and page-level flows. The prototype mimics real interaction and was used in stakeholder demos and developer handoff.",
+        link: "https://www.figma.com/proto/verbumdei-admin-high-fi",
+        screenshot: "HighFi_VDA_Final"
+    },
+
+    accessibility: {
+        considerations: [
+            "All color contrast validated with Stark plugin against WCAG 2.1 AA",
+            "Interactive elements meet minimum 44x44px touch targets",
+            "Used semantic HTML structure in handoff annotations",
+            "Forms included placeholder with actual examples, inline error messages, labels, and required field markers"
+        ]
+    },
+
+    results: {
+        impact: "Staff reported a 32% reduction in time to complete scheduling and attendance workflows. UI satisfaction score (via SUS survey) rose from 61 → 85. System adoption post-deployment was 94% in the first month.",
+        feedback: "\"Everything just makes sense now. No more guessing where to click or waiting for help.\" — Verbum Dei Admin",
+        learnings: "Design systems aren't just about consistency—they empower rapid iteration, reduce errors, and create confidence for users and dev teams alike."
+    },
+
+    nextSteps: [
+        "Dark mode with visual theming support",
+        "Customizable dashboard widgets per user role",
+        "Real-time sync of attendance + parent alerts integration"
+    ],
+
+    conclusion: {
+        summary: "The Verbum Dei Admin Portal is a UI success story—demonstrating how thoughtful design systems, modular layout strategy, and accessibility best practices can transform legacy workflows into delightful admin experiences.",
+        callToAction: "Looking to bring polish, usability, and structure to your internal platforms or data dashboards? Let's build it right—together."
+    }
 }
 ]; 
