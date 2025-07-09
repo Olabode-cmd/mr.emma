@@ -15,6 +15,23 @@ import RefinedDesigns1 from "../assets/schedule.jpg";
 import RefinedDesigns2 from "../assets/view-programe.png";
 import HighFidelityPrototype from "../assets/high-fidelity.png";
 
+// Verbum Dei Images
+
+import VerbumDeiPortalCover from "../assets/verbumdei/verbumdeihero.png";
+import VerbumDeiWireframe1 from "../assets/verbumdei/wireframe1.png";
+import VerbumDeiWireframe2 from "../assets/verbumdei/wireframe2.png";
+import VerbumDeiWireframe3 from "../assets/verbumdei/wireframe3.png";
+import VerbumDeiPrototype from "../assets/verbumdei/prototypeimg.png";
+// Add highlight images for Verbum Dei visual highlights
+import Highlight1 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight1.png";
+import Highlight2 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight2.png";
+import Highlight3 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight3.png";
+import Highlight4 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight4.png";
+import Highlight5 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight5.png";
+import Highlight6 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight6.png";
+import Highlight7 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight7.png";
+import Highlight8 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight8.png";
+
 export const portfolioData = [
     {
         id: "freshmclean",
@@ -353,7 +370,7 @@ export const portfolioData = [
 {
     id: "verbumdei_ui_admin",
     title: "Verbum Dei Academy Admin Portal",
-    heroImage: "VerbumDeiPortalCover",
+    heroImage: VerbumDeiPortalCover,
     
     overview: {
         duration: "September 2024 – January 2025",
@@ -378,7 +395,7 @@ export const portfolioData = [
         wireframes: {
             description: "I started with low-fidelity layout exploration for dashboard composition. I applied an 8pt spacing system and a 12-column grid to maintain visual balance and modular scaling. All primary views were tested at 1440px and 1024px breakpoints.",
             tools: ["Figma", "Miro", "Zeplin"],
-            images: ["Wireframe_VDA_Dashboard", "Wireframe_VDA_Scheduler"]
+            images: [VerbumDeiWireframe1, VerbumDeiWireframe2, VerbumDeiWireframe3]
         },
         designSystem: {
             description: "The system was built around atomic design principles—atoms (buttons, inputs), molecules (form groups, nav cards), and organisms (payment report charts, attendance table, student table). Components were nested using Auto Layout and constraints for full responsiveness.",
@@ -415,11 +432,6 @@ export const portfolioData = [
                 "Fees payment charts"
             ]
         },
-        lowFidelityPrototype: {
-            description: "Prototype tested the placement of core components and navigation logic. All interactive regions followed a consistent click area size of 44x44px for accessibility.",
-            link: "https://www.figma.com/proto/verbumdei-admin-low-fi",
-            images: ["Proto_Overview_VDA"]
-        },
         usabilityFeedback: {
             overview: "The usability testing focused on three core modules: student management, teacher management, and fee payment. Feedback was gathered through guided tasks performed by four admin users, followed by short interviews.",
             findings: [
@@ -444,23 +456,32 @@ export const portfolioData = [
                 "Microinteraction feedback on hover, click, success states"
             ],
             visualHighlights: [
-                "Vertical spacing system ensures visual rhythm across sections",
-                "Consistency enforced with global color tokens and typography rules",
-                "Dynamic UI elements like date pickers and progress steps use smooth 150ms easing transitions"
+                Highlight1,
+                Highlight2,
+                Highlight3,
+                Highlight4,
+                Highlight5,
+                Highlight6,
+                Highlight7,
+                Highlight8,
             ],
-            images: [
-                "Dashboard_Final_UI",
-                "Attendance_UI_Table",
-                "Fees payment chart",
-                "DesignSystem_Tokens_UI"
+            visualHighlightsCaptions: [
+                "Dashboard overview",
+                "Student management UI",
+                "Attendance tracking",
+                "Event calendar",
+                "Fee payment chart",
+                "Responsive layout",
+                "Microinteractions",
+                "Design system tokens"
             ]
         }
     },
 
     highFidelityPrototype: {
         description: "Built using Figma's interactive components, hover states, and page-level flows. The prototype mimics real interaction and was used in stakeholder demos and developer handoff.",
-        link: "https://www.figma.com/proto/verbumdei-admin-high-fi",
-        screenshot: "HighFi_VDA_Final"
+        link: "https://www.figma.com/proto/typR9bvvVGnDdlcZQ0iTlj/VERBUM-ACADEMY-ADMIN-DESIGN?node-id=219-606&p=f&t=qKNv8ybWPjcQHm8G-1&scaling=scale-down&content-scaling=fixed&page-id=7%3A1828&starting-point-node-id=219%3A606",
+        screenshot: VerbumDeiPrototype
     },
 
     accessibility: {

@@ -563,6 +563,7 @@ const CaseStudy = () => {
               )}
 
               {/* Low-Fidelity Prototype */}
+              {project.designProcess.lowFidelityPrototype && (
               <div className="mb-20">
                 <div className="max-w-3xl mx-auto text-center mb-12">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-6">
@@ -614,7 +615,8 @@ const CaseStudy = () => {
                   </a>
                 </div>
               </div>
-
+              )}
+              
               {/* Usability Feedback - New section for Verbum Dei */}
               {project.designProcess.usabilityFeedback && (
                 <div className="mb-20">
@@ -689,23 +691,45 @@ const CaseStudy = () => {
                   </div>
 
                   {/* Visual Highlights */}
-                  <div className="max-w-4xl mx-auto mb-12">
+                  <div className="max-w-6xl mx-auto mb-12">
                     <h4 className="text-xl font-semibold text-gray-900 mb-6 text-center">Visual Highlights</h4>
-                    <div className="space-y-4">
-                      {project.designProcess.finalDesign.visualHighlights.map((highlight, index) => (
-                        <div key={index} className="flex items-start space-x-3 p-4 bg-white shadow-sm rounded-lg border border-gray-100">
-                          <span className="text-purple-600 mt-1">
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
-                            </svg>
-                          </span>
-                          <span className="text-gray-700">{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
+                    {project.id === 'verbumdei_ui_admin' && project.designProcess.finalDesign.visualHighlights ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                        {project.designProcess.finalDesign.visualHighlights.map((img, idx) => (
+                          <div key={idx} className="relative group overflow-hidden rounded-2xl shadow-lg border border-gray-100 bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                            <img
+                              src={img}
+                              alt={`Visual highlight ${idx + 1}`}
+                              className="w-full h-56 object-cover group-hover:brightness-90 transition duration-300"
+                            />
+                            {project.designProcess.finalDesign.visualHighlightsCaptions && project.designProcess.finalDesign.visualHighlightsCaptions[idx] && (
+                              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span className="text-white text-sm font-medium">{project.designProcess.finalDesign.visualHighlightsCaptions[idx]}</span>
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="space-y-4">
+                        {project.designProcess.finalDesign.visualHighlights && project.designProcess.finalDesign.visualHighlights
+                          .filter(v => typeof v === 'string')
+                          .map((highlight, index) => (
+                            <div key={index} className="flex items-start space-x-3 p-4 bg-white shadow-sm rounded-lg border border-gray-100">
+                              <span className="text-purple-600 mt-1">
+                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
+                                </svg>
+                              </span>
+                              <span className="text-gray-700">{highlight}</span>
+                            </div>
+                          ))}
+                      </div>
+                    )}
                   </div>
 
                   {/* Images */}
+                  {project.designProcess.finalDesign.images && (
                   <div className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       {project.designProcess.finalDesign.images.map((image, index) => (
@@ -719,6 +743,7 @@ const CaseStudy = () => {
                       ))}
                     </div>
                   </div>
+                  )}
                 </div>
               )}
             </section>
