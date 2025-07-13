@@ -15,6 +15,8 @@ import RefinedDesigns1 from "../assets/schedule.jpg";
 import RefinedDesigns2 from "../assets/view-programe.png";
 import HighFidelityPrototype from "../assets/high-fidelity.png";
 
+import InformationArchitecture from "../assets/information-architecture.jpg"
+
 // Verbum Dei Images
 
 import VerbumDeiPortalCover from "../assets/verbumdei/verbumdeihero.png";
@@ -34,10 +36,345 @@ import Highlight8 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight8.png";
 
 export const portfolioData = [
     {
+    id: "dixanafterschool",
+    title: "Dixan After-School Program",
+    heroImage: DixanAfterSchool,
+    
+    overview: {
+        duration: "January 2025 - April 2025",
+        summary: "A mobile-first platform that empowers parents, especially working professionals and individuals with accessibility needs, to register, schedule, and manage after-school care for their children with ease - as simple as ordering a ride.",
+        project: "It started with a simple question: What if busy parents could enroll their kids in after-school programs as easily as ordering a ride? The Dixan After-School Program app was designed to bring that convenience to life—empowering parents, especially working professionals and individuals with accessibility needs, to register, schedule, and manage after-school care from their phones.",
+        problem: "Samantha, a marketing manager and single mom of two, was juggling work deadlines and childcare logistics. Each day ended in stress—endless paperwork, vague program details, and worries about her daughter's safety. She wasn't alone. Dozens of parents shared this same frustration. The current process was outdated and overwhelming. ",
+        goal: "We set out to create an intuitive platform that eliminates paperwork, clarifies program options, supports flexible schedules, and is accessible to everyone—no matter their physical abilities or daily constraints."
+    },
+
+    role: {
+        title: "Lead UX Designer & UX Researcher",
+        responsibilities: [
+            "Conducting user research",
+            "Defining personas and user journeys",
+            "Designing wireframes and prototypes",
+            "Testing usability and iterating based on feedback",
+            "Ensuring accessibility compliance"
+        ]
+    },
+
+    userResearch: {
+        summary: "To truly understand our users, I connected with five parents—each with different backgrounds and needs. One participant, David, used a wheelchair and emphasized the lack of accessibility in most childcare apps. Samantha, overwhelmed by forms, just needed peace of mind. I set aside assumptions and listened deeply. That's when the real story unfolded.",
+        painPoints: [
+            {
+                title: "I don't have time for this.",
+                description: "Parents felt like the enrollment process was a second job—multiple forms, no guidance."
+            },
+            {
+                title: "What am I even paying for?",
+                description: "Parents needed clarity on program offerings, safety, and credentials upfront."
+            },
+            {
+                title: "This doesn't fit my life.",
+                description: "A one-size-fits-all schedule clashed with dynamic family routines."
+            },
+            {
+                title: "This app doesn't speak to me.",
+                description: "Parents with disabilities encountered inaccessible text sizes and poor screen reader support."
+            }
+        ],
+        personas: [
+            {
+                name: "Samantha",
+                type: "Parent",
+                image: DixanAfterSchool,
+                description: "Samantha is a career-driven single mother with a demanding schedule who needs a quick and reliable way to enroll her daughter in an after-school program because she often struggles to balance work commitments with ensuring her child's safety and care. ",
+                goals: [
+                    "Find reliable after-school care", 
+                    "Balance work commitments with childcare",
+                    "Ensure her child's safety and well-being"
+                ],
+                frustrations: [
+                    "Time-consuming enrollment processes",
+                    "Lack of flexibility in scheduling",
+                    "Difficulty verifying program quality and safety"
+                ]
+            },
+        ],
+        userJourneyMap: {
+            image: UserJourneyMap,
+            description: "A journey map following Samantha's steps from downloading the app to enrolling her daughter—marking every point of emotional tension and finding opportunities to create ease."
+        },
+        howMightWeStatements: [
+            "How might we make enrolling in after school program fun and easy for parent",
+            "How might we help parent engage their kids while they are busy with work",
+            "How might we make enrolling for an after school program quick as a rocket",
+            "How might we completely eliminate physical contact and paper documentation when parents are enrolling their kids for after-school programs?"
+        ]
+    },
+
+    designProcess: {
+        storyboard: {
+            description: "We created a storyboard to visually map out Samantha's end-to-end journey, capturing each step she takes to complete the enrollment process—from discovering the app to successfully registering her daughter.",
+            images: [
+                Storyboard,
+                Storyboard2,
+            ]
+        },
+        paperWireframes: {
+            description: "Before touching pixels, I sketched five variations of the enrollment screen exploring layouts, CTA placement, and program visibility. The goal was to achieve simplicity, empathy, and ease.",
+            images: [
+                PaperWireframes,
+                PaperWireframes2
+            ]
+        },
+        digitalWireframes: {
+            description: "Translated ideas into wireframes featuring brief program descriptions, testimonials for trust-building, and flexible pickup scheduling that adjusts to each family's weekly rhythm.",
+            images: [
+                DigitalWireframes,
+                DigitalWireframes2
+            ]
+        },
+        lowFidelityPrototype: {
+            description: "Created a prototype that guided users through real tasks: finding a program, comparing options, enrolling, and paying to test what worked and what didn't.",
+            link: "https://www.figma.com/proto/j9opjC2VR1M8exWGUdMwW6/Dixan-After-School-Program?node-id=17-110&starting-point-node-id=17%3A110&t=ajdb7TiGxF5ItWbl-1",
+            images: [
+                LowFidelityPrototype,
+            ]
+        },
+        informationArchitecture: {
+            image: InformationArchitecture,
+            description: "Information architecture for the Dixan After-School Program, mapping out the main navigation and user flows."
+        },
+    },
+
+    usabilityStudy: {
+        details: {
+            researchQuestions: [
+                "How easy is it for parents to find, understand, and register for after-school programs using the app?",
+                "What are the biggest obstacles or points of confusion in the enrollment process?",
+                "Do parents feel that the app is accessible and inclusive for their needs?",
+                "Are there any features that parents find particularly helpful or unnecessary?",
+                "Would parents use this app again or recommend it to others?"
+            ],
+            participants: [
+                "Two males, two females, and one physically disabled parent (wheelchair user)",
+                "All have children aged 5-10 and have prior experience with after-school care apps"
+            ],
+            methodology: [
+                "Unmoderated usability study",
+                "Location: Lagos, remote task completion for each participant",
+                "Each participant completed the key user flows using a low-fidelity prototype",
+                "Sessions lasted 12-17 minutes, with SUS (System Usability Scale) follow-up survey"
+            ]
+        },
+        sessionImages: [
+            { src: UsabilitySession1, caption: "Usability Study session 1" },
+            { src: UsabilitySession2, caption: "Usability Study session 2" }
+        ],
+        findings: [
+            {
+                title: "Brief info below the Program title",
+                description: "Majority of the users wanted to see a short, clear description and key info before clicking to learn more about a program."
+            },
+            {
+                title: "Different pickup times for different days",
+                description: "Most participants wanted to be able to set different pickup options for each day of the week."
+            },
+            {
+                title: "Making Installment payment",
+                description: "Some participants expressed interest in making installment payments for flexibility."
+            },
+            {
+                title: "Option to pause current program or order",
+                description: "Most of the participants indicated that performing a single task to stop or pause the current program was important."
+            }
+        ],
+        usabilityStudyPlanLink: "https://docs.google.com/document/d/14uMj-fPf6x4_W8Ssihhn0qtOI9gRoiDvMPz50nbdl_g/edit?usp=sharing"
+    },
+
+    refinedDesigns: {
+        description: "We reworked the flow based on usability findings, introducing quick-glance summaries with ratings and flexible scheduling per weekday to address user needs.",
+        images: [
+            RefinedDesigns1,
+            RefinedDesigns2,
+        ]
+    },
+
+    highFidelityPrototype: {
+        description: "From color palette to microinteractions, every pixel was designed to prioritize user comfort and control, creating a seamless enrollment experience.",
+        link: "https://www.figma.com/proto/SuPZvlQbSaOaMiSZifdIMJ/Bright-Time-low-fidelity-wireframe?node-id=17-1191&t=2kZB6i12gV1QijEh-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=37%3A843",
+        screenshot: HighFidelityPrototype
+    },
+
+    accessibilityConsiderations: [
+        "Enabled screen reader support",
+        "Structured screens for keyboard navigation",
+        "Chose high-contrast colors",
+        "Built inclusivity as a foundation, not an add-on"
+    ],
+
+    takeaways: {
+        impact: "One participant said, 'This app feels like it was made for me. Finally.' We turned frustration into relief.",
+        whatILearned: "Empathy reveals what data can't. Building trust is as important as building features.",
+        nextSteps: [
+            "Localized versions in multiple languages",
+            "In-app messaging for parents and caregivers",
+            "Dashboard for tracking enrollments and schedules"
+        ]
+    },
+
+    conclusion: {
+        summary: "The Dixan After-School Program app transformed frustration into relief by creating an intuitive platform that makes enrolling children in after-school programs as easy as ordering a ride, bringing convenience to busy parents and those with accessibility needs.",
+        connect: "Interested in learning more about this project or discussing similar challenges? Let's connect and explore how we can create impactful digital solutions together."
+    }
+},
+{
+    id: "verbumdei_ui_admin",
+    title: "Verbum Dei Academy Admin Portal",
+    heroImage: VerbumDeiPortalCover,
+    
+    overview: {
+        duration: "September 2024 – January 2025",
+        summary: "A modern web admin portal designed for Verbum Dei Academy to centralize and streamline academic operations. This visual overhaul focused on clarity, responsiveness, and consistency across student, staff, and event management systems. As the UI Designer, I created a visually coherent system with modular dashboards, clean typography, and intuitive interactions that elevated staff workflow efficiency.",
+        project: "School administrators used disconnected systems for managing students, teachers, attendance, and events. I was tasked with building a UI that unified all admin tools under one intuitive interface, supported by a scalable design system.",
+        problem: "Staff experienced friction using outdated and inconsistent tools that lacked structure, flexibility, and visual feedback.",
+        goal: "Design a sleek, structured, and accessible UI that simplifies admin workflows and improves overall operational efficiency."
+    },
+
+    role: {
+        title: "UI Designer & UX Researcher",
+        responsibilities: [
+            "Established a reusable design system in Figma with over 40 components",
+            "Designed responsive dashboard layouts for desktop and tablet",
+            "Created pixel-perfect prototypes with micro-interactions and visual feedback states",
+            "Defined icon usage, spacing rules, button states, form patterns",
+            "Collaborated with developers to maintain UI fidelity using Figma specs"
+        ]
+    },
+
+    designProcess: {
+        wireframes: {
+            description: "I started with low-fidelity layout exploration for dashboard composition. I applied an 8pt spacing system and a 12-column grid to maintain visual balance and modular scaling. All primary views were tested at 1440px and 1024px breakpoints.",
+            tools: ["Figma", "Miro", "Zeplin"],
+            images: [VerbumDeiWireframe1, VerbumDeiWireframe2, VerbumDeiWireframe3]
+        },
+        designSystem: {
+            description: "The system was built around atomic design principles—atoms (buttons, inputs), molecules (form groups, nav cards), and organisms (payment report charts, attendance table, student table). Components were nested using Auto Layout and constraints for full responsiveness.",
+            foundations: {
+                typography: {
+                    primaryFont: "Lato",
+                    scale: "14px, 16px, 18px, 24px, 36px",
+                    lineHeight: "1.4–1.6em",
+                    usage: "Bold for headers, medium for body, monospace for data fields"
+                },
+                colors: {
+                    primary: "#007BFF",
+                    accent: "#F47B20",
+                    success: "#1BAA5F",
+                    textPrimary: "#333333",
+                    textSecondary: "#656466",
+                    error: "#DE3B3B",
+                    backgrounds: ["#FFFFFF", "#F6F8FB"],
+                    contrast: "Maintained WCAG AA with 4.5:1 or better"
+                },
+                iconography: {
+                    library: "Material + Vuesax + custom icons + SVG",
+                    rules: "16px/24px sizes, 1.5px stroke weight, 8px padding buffer"
+                },
+                buttons: {
+                    variants: ["Primary", "Secondary", "Ghost", "Danger"],
+                    states: ["Default", "Hover", "Active", "Disabled"]
+                }
+            },
+            components: [
+                "Calendar module with event highlight logic",
+                "Attendance table with column filtering and hover states",
+                "Sidebar navigation with active indicators and collapsibles",
+                "Fees payment charts"
+            ]
+        },
+        usabilityFeedback: {
+            overview: "The usability testing focused on three core modules: student management, teacher management, and fee payment. Feedback was gathered through guided tasks performed by four admin users, followed by short interviews.",
+            findings: [
+                {
+                    feature: "Student Management",
+                    issue: "Users struggled to locate the 'Edit Profile' button for individual students from the list view.",
+                    solution: "We position the action at the upper right of the profile page and stick on scroll and add clear tooltips with labels like 'Edit Student', 'View Details', and 'Assign to Class'."
+                },
+                {
+                    feature: "Fee Payment",
+                    issue: "The initial layout of the fee history table lacked filters and felt overwhelming with too many columns.",
+                    solution: "Redesigned the fee history section with collapsible rows, added quick filters for 'Paid', 'Pending', and 'Overdue', and emphasized the current term summary at the top using card layouts."
+                }
+            ],
+            insight: "These feedback loops informed refinements in component clarity, interaction proximity, and visual hierarchy—ultimately reducing cognitive load and making high-frequency tasks more intuitive for school staff.",
+            usabilityStudyPlanLink: "https://docs.google.com/document/d/1KC7LHNzyCuuCoBxX2p8NlNGkycA1EPzgq54E0lXXb3o/edit?usp=sharing"
+        },
+        finalDesign: {
+            features: [
+                "Hierarchical dashboard with smart cards and collapsible sections",
+                "Sticky filters on scroll in tables",
+                "Responsive 12-column grid with breakpoint-specific paddings",
+                "Microinteraction feedback on hover, click, success states"
+            ],
+            visualHighlights: [
+                Highlight1,
+                Highlight2,
+                Highlight3,
+                Highlight4,
+                Highlight5,
+                Highlight6,
+                Highlight7,
+                Highlight8,
+            ],
+            visualHighlightsCaptions: [
+                "Dashboard overview",
+                "Student management UI",
+                "Attendance tracking",
+                "Event calendar",
+                "Fee payment chart",
+                "Responsive layout",
+                "Microinteractions",
+                "Design system tokens"
+            ],
+            behanceLink: "https://www.behance.net/gallery/215488159/Verbum-Dei-Academy-Admin-Portal",
+            images: []
+        }
+    },
+
+    highFidelityPrototype: {
+        description: "Built using Figma's interactive components, hover states, and page-level flows. The prototype mimics real interaction and was used in stakeholder demos and developer handoff.",
+        link: "https://www.figma.com/proto/typR9bvvVGnDdlcZQ0iTlj/VERBUM-ACADEMY-ADMIN-DESIGN?node-id=219-606&p=f&t=qKNv8ybWPjcQHm8G-1&scaling=scale-down&content-scaling=fixed&page-id=7%3A1828&starting-point-node-id=219%3A606",
+        screenshot: VerbumDeiPrototype
+    },
+
+    accessibility: {
+        considerations: [
+            "All color contrast validated with Stark plugin against WCAG 2.1 AA",
+            "Interactive elements meet minimum 44x44px touch targets",
+            "Used semantic HTML structure in handoff annotations",
+            "Forms included placeholder with actual examples, inline error messages, labels, and required field markers"
+        ]
+    },
+
+    results: {
+        impact: "Staff reported a 32% reduction in time to complete scheduling and attendance workflows. UI satisfaction score (via SUS survey) rose from 61 → 90. System adoption post-deployment was 94% in the first month.",
+        feedback: '"Everything just makes sense now. No more guessing where to click or waiting for help." — Verbum Dei Admin',
+        learnings: "Design systems aren't just about consistency—they empower rapid iteration, reduce errors, and create confidence for users and dev teams alike."
+    },
+
+    nextSteps: [
+        "Dark mode with visual theming support",
+        "Customizable dashboard widgets per user role",
+        "Real-time sync of attendance + parent alerts integration"
+    ],
+
+    conclusion: {
+        summary: "The Verbum Dei Admin Portal is a UI success story—demonstrating how thoughtful design systems, modular layout strategy, and accessibility best practices can transform legacy workflows into delightful admin experiences.",
+        callToAction: "Looking to bring polish, usability, and structure to your internal platforms or data dashboards? Let's build it right—together."
+    }
+    }, {
         id: "freshmclean",
         title: "FreshMclean",
         heroImage: FreshMclean,
-        
+
         overview: {
             duration: "4 months",
             summary: "A comprehensive platform connecting German households with professional cleaners, streamlining the process of booking and managing cleaning services while providing job opportunities for cleaning professionals.",
@@ -182,332 +519,207 @@ export const portfolioData = [
             connect: "Interested in learning more about this project or discussing similar challenges? Let's connect and explore how we can create impactful digital solutions together."
         }
     },
-    {
-    id: "dixanafterschool",
-    title: "Dixan After-School Program",
-    heroImage: DixanAfterSchool,
-    
-    overview: {
-        duration: "January 2025 - April 2025",
-        summary: "A mobile-first platform that empowers parents, especially working professionals and individuals with accessibility needs, to register, schedule, and manage after-school care for their children with ease - as simple as ordering a ride.",
-        project: "It started with a simple question: What if busy parents could enroll their kids in after-school programs as easily as ordering a ride? The Dixan After-School Program app was designed to bring that convenience to life—empowering parents, especially working professionals and individuals with accessibility needs, to register, schedule, and manage after-school care from their phones.",
-        problem: "Samantha, a marketing manager and single mom of two, was juggling work deadlines and childcare logistics. Each day ended in stress—endless paperwork, vague program details, and worries about her daughter's safety. She wasn't alone. Dozens of parents shared this same frustration. The current process was outdated and overwhelming. ",
-        goal: "We set out to create an intuitive platform that eliminates paperwork, clarifies program options, supports flexible schedules, and is accessible to everyone—no matter their physical abilities or daily constraints."
-    },
+    // {
+    //     id: "rentwise",
+    //     title: "RentWise – Simplifying Home Rentals for Nigerians",
+    //     heroImage: RentWiseHero,
 
-    role: {
-        title: "Lead UX Designer & UX Researcher",
-        responsibilities: [
-            "Conducting user research",
-            "Defining personas and user journeys",
-            "Designing wireframes and prototypes",
-            "Testing usability and iterating based on feedback",
-            "Ensuring accessibility compliance"
-        ]
-    },
+    //     overview: {
+    //         duration: "August 2024 – December 2024",
+    //         summary: "A digital platform built to simplify the rental process for Nigerians by eliminating fraud, unnecessary agent fees, and scattered information—empowering both tenants and landlords to connect directly and securely.",
+    //         project: "The RentWise project began with one goal: to solve the stress of home renting in Nigeria. Inspired by Chinedu's real-world struggles, the platform was designed to provide verified listings, remove reliance on agents, and support landlords through a tech-light onboarding process.",
+    //         problem: "Chinedu, a 29-year-old civil engineer in Lagos, faced fake listings, hidden costs, and a lack of trust in online platforms. His frustrations were not unique—renting in Nigeria often meant dealing with emotional fatigue, fragmented information, and non-tech-savvy landlords.",
+    //         goal: "Create a user-friendly, trustworthy, and secure rental platform that simplifies property searches, builds trust with verified listings, and supports landlords unfamiliar with digital tools."
+    //     },
 
-    userResearch: {
-        summary: "To truly understand our users, I connected with five parents—each with different backgrounds and needs. One participant, David, used a wheelchair and emphasized the lack of accessibility in most childcare apps. Samantha, overwhelmed by forms, just needed peace of mind. I set aside assumptions and listened deeply. That's when the real story unfolded.",
-        painPoints: [
-            {
-                title: "I don't have time for this.",
-                description: "Parents felt like the enrollment process was a second job—multiple forms, no guidance."
-            },
-            {
-                title: "What am I even paying for?",
-                description: "Parents needed clarity on program offerings, safety, and credentials upfront."
-            },
-            {
-                title: "This doesn't fit my life.",
-                description: "A one-size-fits-all schedule clashed with dynamic family routines."
-            },
-            {
-                title: "This app doesn't speak to me.",
-                description: "Parents with disabilities encountered inaccessible text sizes and poor screen reader support."
-            }
-        ],
-        personas: [
-            {
-                name: "Samantha",
-                type: "Parent",
-                image: DixanAfterSchool,
-                description: "Samantha is a career-driven single mother with a demanding schedule who needs a quick and reliable way to enroll her daughter in an after-school program because she often struggles to balance work commitments with ensuring her child's safety and care. ",
-                goals: [
-                    "Find reliable after-school care", 
-                    "Balance work commitments with childcare",
-                    "Ensure her child's safety and well-being"
-                ],
-                frustrations: [
-                    "Time-consuming enrollment processes",
-                    "Lack of flexibility in scheduling",
-                    "Difficulty verifying program quality and safety"
-                ]
-            },
-        ],
-        userJourneyMap: {
-            image: UserJourneyMap,
-            description: "A journey map following Samantha's steps from downloading the app to enrolling her daughter—marking every point of emotional tension and finding opportunities to create ease."
-        },
-        howMightWeStatements: [
-            "How might we make enrolling in after school program fun and easy for parent",
-            "How might we help parent engage their kids while they are busy with work",
-            "How might we make enrolling for an after school program quick as a rocket",
-            "How might we completely eliminate physical contact and paper documentation when parents are enrolling their kids for after-school programs?"
-        ]
-    },
+    //     role: {
+    //         title: "Lead UX Designer",
+    //         responsibilities: [
+    //             "Conducted interviews and surveys across major Nigerian cities",
+    //             "Defined user pain points and opportunities",
+    //             "Built information architecture and user flows",
+    //             "Created wireframes, prototypes, and high-fidelity designs",
+    //             "Conducted usability testing and implemented design refinements"
+    //         ]
+    //     },
 
-    designProcess: {
-        storyboard: {
-            description: "We created a storyboard to visually map out Samantha's end-to-end journey, capturing each step she takes to complete the enrollment process—from discovering the app to successfully registering her daughter.",
-            images: [
-                Storyboard,
-                Storyboard2,
-            ]
-        },
-        paperWireframes: {
-            description: "Before touching pixels, I sketched five variations of the enrollment screen exploring layouts, CTA placement, and program visibility. The goal was to achieve simplicity, empathy, and ease.",
-            images: [
-                PaperWireframes,
-                PaperWireframes2
-            ]
-        },
-        digitalWireframes: {
-            description: "Translated ideas into wireframes featuring brief program descriptions, testimonials for trust-building, and flexible pickup scheduling that adjusts to each family's weekly rhythm.",
-            images: [
-                DigitalWireframes,
-                DigitalWireframes2
-            ]
-        },
-        lowFidelityPrototype: {
-            description: "Created a prototype that guided users through real tasks: finding a program, comparing options, enrolling, and paying to test what worked and what didn't.",
-            link: "https://www.figma.com/proto/example",
-            images: [
-                LowFidelityPrototype,
-            ]
-        },
-    },
+    //     userResearch: {
+    //         summary: "Interviews and surveys were conducted across Lagos, Abuja, and Port Harcourt. While initial assumptions pointed to fraud and hidden costs, deeper insights revealed pain points such as landlord reluctance to adopt tech and emotional exhaustion from navigating scattered platforms.",
+    //         painPoints: [
+    //             {
+    //                 title: "Fake Listings",
+    //                 description: "Users like Chinedu found it hard to trust property listings due to common scams and deceptive photos."
+    //             },
+    //             {
+    //                 title: "Agent Dependency",
+    //                 description: "Unnecessary agent fees were a major frustration, especially when the agent provided little value."
+    //             },
+    //             {
+    //                 title: "Information Overload",
+    //                 description: "Property information was often scattered, inconsistent, or outdated, making comparisons hard."
+    //             },
+    //             {
+    //                 title: "Landlord Resistance",
+    //                 description: "Many landlords lacked digital literacy, avoiding platforms that required complex tools or onboarding."
+    //             }
+    //         ],
+    //         personas: [
+    //             {
+    //                 name: "Chinedu",
+    //                 type: "Tenant",
+    //                 image: RentWiseHero,
+    //                 description: "Chinedu is a young, hardworking civil engineer trying to rent his first home in Lagos. He values trust, transparency, and a straightforward process, but feels overwhelmed by scams and intermediaries.",
+    //                 goals: [
+    //                     "Find a trustworthy listing quickly",
+    //                     "Avoid agent fees and third-party interference",
+    //                     "Rent a home with peace of mind"
+    //                 ],
+    //                 frustrations: [
+    //                     "Skepticism toward online listings",
+    //                     "Wasting time with unverified information",
+    //                     "No centralized platform with end-to-end support"
+    //                 ]
+    //             }
+    //         ],
+    //         userJourneyMap: {
+    //             image: UserJourneyMapRentWise,
+    //             description: "The map tracks Chinedu’s emotional and practical journey from beginning his search to securing a rental—highlighting friction points and moments of opportunity."
+    //         },
+    //         howMightWeStatements: [
+    //             "How might we help Chinedu quickly identify trusted listings?",
+    //             "How might we reduce his reliance on agents?",
+    //             "How might we support landlords who aren’t tech-savvy?",
+    //             "How might we centralize rental information for transparency and ease?"
+    //         ]
+    //     },
 
-    usabilityStudy: {
-        details: {
-            researchQuestions: [
-                "How easy is it for parents to find, understand, and register for after-school programs using the app?",
-                "What are the biggest obstacles or points of confusion in the enrollment process?",
-                "Do parents feel that the app is accessible and inclusive for their needs?",
-                "Are there any features that parents find particularly helpful or unnecessary?",
-                "Would parents use this app again or recommend it to others?"
-            ],
-            participants: [
-                "Two males, two females, and one physically disabled parent (wheelchair user)",
-                "All have children aged 5-10 and have prior experience with after-school care apps"
-            ],
-            methodology: [
-                "Unmoderated usability study",
-                "Location: Lagos, remote task completion for each participant",
-                "Each participant completed the key user flows using a low-fidelity prototype",
-                "Sessions lasted 12-17 minutes, with SUS (System Usability Scale) follow-up survey"
-            ]
-        },
-        sessionImages: [
-            UsabilitySession1,
-            UsabilitySession2
-        ],
-        findings: [
-            {
-                title: "Brief info below the Program title",
-                description: "Majority of the users wanted to see a short, clear description and key info before clicking to learn more about a program."
-            },
-            {
-                title: "Different pickup times for different days",
-                description: "Most participants wanted to be able to set different pickup options for each day of the week."
-            },
-            {
-                title: "Making Installment payment",
-                description: "Some participants expressed interest in making installment payments for flexibility."
-            },
-            {
-                title: "Option to pause current program or order",
-                description: "Most of the participants indicated that performing a single task to stop or pause the current program was important."
-            }
-        ]
-    },
+    //     mappingExperience: {
+    //         informationArchitecture: {
+    //             description: "I built a sitemap based on what users like Chinedu logically expected: Home > Listings > Messages > Bookings > Dashboard."
+    //         },
+    //         userFlows: {
+    //             tenantFlow: "Home → Search → Filter → Listing → Contact → Schedule → Apply",
+    //             landlordFlow: "Portal → Register → List → Manage → Finalize",
+    //             description: "These flows ensured Chinedu could complete tasks without friction or confusion."
+    //         }
+    //     },
 
-    refinedDesigns: {
-        description: "We reworked the flow based on usability findings, introducing quick-glance summaries with ratings and flexible scheduling per weekday to address user needs.",
-        images: [
-            RefinedDesigns1,
-            RefinedDesigns2,
-        ]
-    },
+    //     designProcess: {
+    //         storyboard: {
+    //             description: "The storyboard captures Chinedu’s end-to-end rental experience, from discovering RentWise to successfully renting a home, visually mapping emotional highs and lows.",
+    //             images: [
+    //                 RentWiseStoryboard1,
+    //                 RentWiseStoryboard2
+    //             ]
+    //         },
+    //         paperWireframes: {
+    //             description: "Initial sketches focused on homepage and listings, exploring layouts with collapsed clutter, CTA clarity, and trust signals like verification badges.",
+    //             images: [
+    //                 RentWisePaper1,
+    //                 RentWisePaper2
+    //             ]
+    //         },
+    //         digitalWireframes: {
+    //             description: "Brought early ideas to life using Balsamiq and Figma, showing key tenant and landlord flows, while exploring layout responsiveness and element hierarchy.",
+    //             images: [
+    //                 RentWiseDigital1,
+    //                 RentWiseDigital2
+    //             ]
+    //         },
+    //         lowFidelityPrototype: {
+    //             description: "Tenants could search, filter, and book rentals. Landlords could onboard listings. The prototype tested scrollability, icon use, and core navigation.",
+    //             link: "https://www.figma.com/proto/rentwise-lowfi",
+    //             images: [
+    //                 RentWiseLowFidelity
+    //             ]
+    //         }
+    //     },
 
-    highFidelityPrototype: {
-        description: "From color palette to microinteractions, every pixel was designed to prioritize user comfort and control, creating a seamless enrollment experience.",
-        link: "https://www.figma.com/proto/example-final",
-        screenshot: HighFidelityPrototype
-    },
+    //     usabilityStudy: {
+    //         details: {
+    //             researchQuestions: [
+    //                 "Can users find and filter properties with ease?",
+    //                 "Is the onboarding process intuitive for landlords?",
+    //                 "Are icons and navigation elements clear?",
+    //                 "What features improve user confidence in listings?",
+    //                 "Are tenants able to complete bookings without external help?"
+    //             ],
+    //             participants: [
+    //                 "Ten renters (ages 24–40), 2 landlords (ages 40–55), mixed digital proficiency",
+    //                 "Locations: Lagos, Abuja, Port Harcourt"
+    //             ],
+    //             methodology: [
+    //                 "Unmoderated usability testing",
+    //                 "Participants completed booking and listing tasks using the prototype",
+    //                 "Remote sessions, each lasting 10–15 minutes",
+    //                 "Observation + post-task survey"
+    //             ]
+    //         },
+    //         sessionImages: [
+    //             UsabilityTestRentWise1,
+    //             UsabilityTestRentWise2
+    //         ],
+    //         findings: [
+    //             {
+    //                 title: "Missed Filter Bar",
+    //                 description: "Users overlooked filters, so a sticky bar was introduced to improve visibility."
+    //             },
+    //             {
+    //                 title: "Too Many Icons",
+    //                 description: "Users were confused by excessive icons—simplified design followed."
+    //             },
+    //             {
+    //                 title: "Favorite Listings",
+    //                 description: "Users wanted to save listings for later—'Favorites' feature was added."
+    //             },
+    //             {
+    //                 title: "Landlord Onboarding",
+    //                 description: "Landlords felt unsure of what steps to take—progress indicators were implemented."
+    //             }
+    //         ]
+    //     },
 
-    accessibilityConsiderations: [
-        "Enabled screen reader support",
-        "Structured screens for keyboard navigation",
-        "Chose high-contrast colors",
-        "Built inclusivity as a foundation, not an add-on"
-    ],
+    //     refinedDesigns: {
+    //         description: "Based on testing feedback, we introduced sticky filters, simplified iconography, a Favorites section, and supportive onboarding with visual cues.",
+    //         images: [
+    //             RentWiseRefined1,
+    //             RentWiseRefined2
+    //         ]
+    //     },
 
-    takeaways: {
-        impact: "One participant said, 'This app feels like it was made for me. Finally.' We turned frustration into relief.",
-        whatILearned: "Empathy reveals what data can't. Building trust is as important as building features.",
-        nextSteps: [
-            "Localized versions in multiple languages",
-            "In-app messaging for parents and caregivers",
-            "Dashboard for tracking enrollments and schedules"
-        ]
-    },
+    //     highFidelityPrototype: {
+    //         description: "Final designs featured verified badges, flexible booking CTAs, a clean dashboard for both users, and accessible landlord listing options.",
+    //         link: "https://www.figma.com/proto/rentwise-final",
+    //         screenshot: RentWiseHiFi
+    //     },
 
-    conclusion: {
-        summary: "The Dixan After-School Program app transformed frustration into relief by creating an intuitive platform that makes enrolling children in after-school programs as easy as ordering a ride, bringing convenience to busy parents and those with accessibility needs.",
-        connect: "Interested in learning more about this project or discussing similar challenges? Let's connect and explore how we can create impactful digital solutions together."
-    }
-},
-{
-    id: "verbumdei_ui_admin",
-    title: "Verbum Dei Academy Admin Portal",
-    heroImage: VerbumDeiPortalCover,
-    
-    overview: {
-        duration: "September 2024 – January 2025",
-        summary: "A modern web admin portal designed for Verbum Dei Academy to centralize and streamline academic operations. This visual overhaul focused on clarity, responsiveness, and consistency across student, staff, and event management systems. As the UI Designer, I created a visually coherent system with modular dashboards, clean typography, and intuitive interactions that elevated staff workflow efficiency.",
-        project: "School administrators used disconnected systems for managing students, teachers, attendance, and events. I was tasked with building a UI that unified all admin tools under one intuitive interface, supported by a scalable design system.",
-        problem: "Staff experienced friction using outdated and inconsistent tools that lacked structure, flexibility, and visual feedback.",
-        goal: "Design a sleek, structured, and accessible UI that simplifies admin workflows and improves overall operational efficiency."
-    },
+    //     accessibilityConsiderations: [
+    //         "High-contrast color palette for legibility",
+    //         "Keyboard navigation for power users",
+    //         "Alt text for all icons and images",
+    //         "Form field guidance for clarity and usability"
+    //     ],
 
-    role: {
-        title: "UI Designer",
-        responsibilities: [
-            "Established a reusable design system in Figma with over 40 components",
-            "Designed responsive dashboard layouts for desktop and tablet",
-            "Created pixel-perfect prototypes with micro-interactions and visual feedback states",
-            "Defined icon usage, spacing rules, button states, form patterns",
-            "Collaborated with developers to maintain UI fidelity using Figma specs"
-        ]
-    },
+    //     takeaways: {
+    //         impact: "Testers responded with enthusiasm—'This is exactly what the Nigerian rental market needs—simple and scam-free.'",
+    //         whatILearned: "Designing for trust means going beyond UI—it's about clarity, empathy, and empowering users at every touchpoint.",
+    //         nextSteps: [
+    //             "Build a mobile-first MVP",
+    //             "Implement secure payments and rent tracking",
+    //             "Support landlords with bulk upload features",
+    //             "Integrate e-lease legal templates"
+    //         ]
+    //     },
 
-    designProcess: {
-        wireframes: {
-            description: "I started with low-fidelity layout exploration for dashboard composition. I applied an 8pt spacing system and a 12-column grid to maintain visual balance and modular scaling. All primary views were tested at 1440px and 1024px breakpoints.",
-            tools: ["Figma", "Miro", "Zeplin"],
-            images: [VerbumDeiWireframe1, VerbumDeiWireframe2, VerbumDeiWireframe3]
-        },
-        designSystem: {
-            description: "The system was built around atomic design principles—atoms (buttons, inputs), molecules (form groups, nav cards), and organisms (payment report charts, attendance table, student table). Components were nested using Auto Layout and constraints for full responsiveness.",
-            foundations: {
-                typography: {
-                    primaryFont: "Lato",
-                    scale: "14px, 16px, 18px, 24px, 36px",
-                    lineHeight: "1.4–1.6em",
-                    usage: "Bold for headers, medium for body, monospace for data fields"
-                },
-                colors: {
-                    primary: "#007BFF",
-                    accent: "#F47B20",
-                    success: "#1BAA5F",
-                    textPrimary: "#333333",
-                    textSecondary: "#656466",
-                    error: "#DE3B3B",
-                    backgrounds: ["#FFFFFF", "#F6F8FB"],
-                    contrast: "Maintained WCAG AA with 4.5:1 or better"
-                },
-                iconography: {
-                    library: "Material + Vuesax + custom icons + SVG",
-                    rules: "16px/24px sizes, 1.5px stroke weight, 8px padding buffer"
-                },
-                buttons: {
-                    variants: ["Primary", "Secondary", "Ghost", "Danger"],
-                    states: ["Default", "Hover", "Active", "Disabled"]
-                }
-            },
-            components: [
-                "Calendar module with event highlight logic",
-                "Attendance table with column filtering and hover states",
-                "Sidebar navigation with active indicators and collapsibles",
-                "Fees payment charts"
-            ]
-        },
-        usabilityFeedback: {
-            overview: "The usability testing focused on three core modules: student management, teacher management, and fee payment. Feedback was gathered through guided tasks performed by four admin users, followed by short interviews.",
-            findings: [
-                {
-                    feature: "Student Management",
-                    issue: "Users struggled to locate the 'Edit Profile' button for individual students from the list view.",
-                    solution: "We position the action at the upper right of the profile page and stick on scroll and add clear tooltips with labels like 'Edit Student', 'View Details', and 'Assign to Class'."
-                },
-                {
-                    feature: "Fee Payment",
-                    issue: "The initial layout of the fee history table lacked filters and felt overwhelming with too many columns.",
-                    solution: "Redesigned the fee history section with collapsible rows, added quick filters for 'Paid', 'Pending', and 'Overdue', and emphasized the current term summary at the top using card layouts."
-                }
-            ],
-            insight: "These feedback loops informed refinements in component clarity, interaction proximity, and visual hierarchy—ultimately reducing cognitive load and making high-frequency tasks more intuitive for school staff."
-        },
-        finalDesign: {
-            features: [
-                "Hierarchical dashboard with smart cards and collapsible sections",
-                "Sticky filters on scroll in tables",
-                "Responsive 12-column grid with breakpoint-specific paddings",
-                "Microinteraction feedback on hover, click, success states"
-            ],
-            visualHighlights: [
-                Highlight1,
-                Highlight2,
-                Highlight3,
-                Highlight4,
-                Highlight5,
-                Highlight6,
-                Highlight7,
-                Highlight8,
-            ],
-            visualHighlightsCaptions: [
-                "Dashboard overview",
-                "Student management UI",
-                "Attendance tracking",
-                "Event calendar",
-                "Fee payment chart",
-                "Responsive layout",
-                "Microinteractions",
-                "Design system tokens"
-            ]
-        }
-    },
-
-    highFidelityPrototype: {
-        description: "Built using Figma's interactive components, hover states, and page-level flows. The prototype mimics real interaction and was used in stakeholder demos and developer handoff.",
-        link: "https://www.figma.com/proto/typR9bvvVGnDdlcZQ0iTlj/VERBUM-ACADEMY-ADMIN-DESIGN?node-id=219-606&p=f&t=qKNv8ybWPjcQHm8G-1&scaling=scale-down&content-scaling=fixed&page-id=7%3A1828&starting-point-node-id=219%3A606",
-        screenshot: VerbumDeiPrototype
-    },
-
-    accessibility: {
-        considerations: [
-            "All color contrast validated with Stark plugin against WCAG 2.1 AA",
-            "Interactive elements meet minimum 44x44px touch targets",
-            "Used semantic HTML structure in handoff annotations",
-            "Forms included placeholder with actual examples, inline error messages, labels, and required field markers"
-        ]
-    },
-
-    results: {
-        impact: "Staff reported a 32% reduction in time to complete scheduling and attendance workflows. UI satisfaction score (via SUS survey) rose from 61 → 85. System adoption post-deployment was 94% in the first month.",
-        feedback: "\"Everything just makes sense now. No more guessing where to click or waiting for help.\" — Verbum Dei Admin",
-        learnings: "Design systems aren't just about consistency—they empower rapid iteration, reduce errors, and create confidence for users and dev teams alike."
-    },
-
-    nextSteps: [
-        "Dark mode with visual theming support",
-        "Customizable dashboard widgets per user role",
-        "Real-time sync of attendance + parent alerts integration"
-    ],
-
-    conclusion: {
-        summary: "The Verbum Dei Admin Portal is a UI success story—demonstrating how thoughtful design systems, modular layout strategy, and accessibility best practices can transform legacy workflows into delightful admin experiences.",
-        callToAction: "Looking to bring polish, usability, and structure to your internal platforms or data dashboards? Let's build it right—together."
-    }
-}
+    //     conclusion: {
+    //         summary: "RentWise turned a common frustration into a seamless digital experience—empowering Nigerian renters and landlords to connect directly and securely without intermediaries or scams.",
+    //         connect: "Want to collaborate or explore UX challenges in real estate or emerging markets? Let’s connect.",
+    //         contact: {
+    //             email: "emmanuel.john@example.com",
+    //             behance: "https://www.behance.net/216671761/RentWise",
+    //             linkedin: "https://www.linkedin.com/in/emmanueljohn",
+    //             phone: "+234 000 000 0000"
+    //         }
+    //     }
+    // }
 ]; 

@@ -572,6 +572,31 @@ const CaseStudy = () => {
                   <p className="text-gray-600 leading-relaxed">
                     {project.designProcess.lowFidelityPrototype.description}
                   </p>
+                  {project.designProcess.lowFidelityPrototype.link && (
+                    <div className="mt-6">
+                      <a
+                        href={project.designProcess.lowFidelityPrototype.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-8 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors duration-300"
+                      >
+                        View Interactive Prototype
+                        <svg
+                          className="w-5 h-5 ml-2"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  )}
                 </div>
                 <div className="max-w-5xl mx-auto mb-10">
                   <div>
@@ -591,29 +616,6 @@ const CaseStudy = () => {
                     )}
                   </div>
                 </div>
-                <div className="text-center">
-                  <a
-                    href={project.designProcess.lowFidelityPrototype.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-8 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors duration-300"
-                  >
-                    View Interactive Prototype
-                    <svg
-                      className="w-5 h-5 ml-2"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                </div>
               </div>
               )}
               
@@ -627,6 +629,21 @@ const CaseStudy = () => {
                     <p className="text-gray-600 leading-relaxed">
                       {project.designProcess.usabilityFeedback.overview}
                     </p>
+                    {project.designProcess.usabilityFeedback.usabilityStudyPlanLink && (
+                      <div className="mt-4">
+                        <a
+                          href={project.designProcess.usabilityFeedback.usabilityStudyPlanLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300"
+                        >
+                          View Usability Study Plan
+                          <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="max-w-4xl mx-auto">
@@ -694,22 +711,39 @@ const CaseStudy = () => {
                   <div className="max-w-6xl mx-auto mb-12">
                     <h4 className="text-xl font-semibold text-gray-900 mb-6 text-center">Visual Highlights</h4>
                     {project.id === 'verbumdei_ui_admin' && project.designProcess.finalDesign.visualHighlights ? (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                        {project.designProcess.finalDesign.visualHighlights.map((img, idx) => (
-                          <div key={idx} className="relative group overflow-hidden rounded-2xl shadow-lg border border-gray-100 bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                            <img
-                              src={img}
-                              alt={`Visual highlight ${idx + 1}`}
-                              className="w-full h-56 object-cover group-hover:brightness-90 transition duration-300"
-                            />
-                            {project.designProcess.finalDesign.visualHighlightsCaptions && project.designProcess.finalDesign.visualHighlightsCaptions[idx] && (
-                              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span className="text-white text-sm font-medium">{project.designProcess.finalDesign.visualHighlightsCaptions[idx]}</span>
-                              </div>
-                            )}
+                      <>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                          {project.designProcess.finalDesign.visualHighlights.map((img, idx) => (
+                            <div key={idx} className="relative group overflow-hidden rounded-2xl shadow-lg border border-gray-100 bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                              <img
+                                src={img}
+                                alt={`Visual highlight ${idx + 1}`}
+                                className="w-full h-56 object-cover group-hover:brightness-90 transition duration-300"
+                              />
+                              {project.designProcess.finalDesign.visualHighlightsCaptions && project.designProcess.finalDesign.visualHighlightsCaptions[idx] && (
+                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                  <span className="text-white text-sm font-medium">{project.designProcess.finalDesign.visualHighlightsCaptions[idx]}</span>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                        {project.designProcess.finalDesign.behanceLink && (
+                          <div className="text-center mt-8">
+                            <a
+                              href={project.designProcess.finalDesign.behanceLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center px-8 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors duration-300"
+                            >
+                              View Full UI Documentation on Behance
+                              <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                            </a>
                           </div>
-                        ))}
-                      </div>
+                        )}
+                      </>
                     ) : (
                       <div className="space-y-4">
                         {project.designProcess.finalDesign.visualHighlights && project.designProcess.finalDesign.visualHighlights
@@ -727,6 +761,27 @@ const CaseStudy = () => {
                       </div>
                     )}
                   </div>
+
+                  {/* Information Architecture for Dixan */}
+                  {project.designProcess.informationArchitecture && (
+                    <div className="mb-20">
+                      <div className="max-w-3xl mx-auto text-center mb-12">
+                        <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                          Information Architecture
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed mb-6">
+                          {project.designProcess.informationArchitecture.description}
+                        </p>
+                      </div>
+                      <div className="max-w-4xl mx-auto flex justify-center">
+                        <img
+                          src={project.designProcess.informationArchitecture.image}
+                          alt="Information Architecture"
+                          className="rounded-lg shadow-lg"
+                        />
+                      </div>
+                    </div>
+                  )}
 
                   {/* Images */}
                   {project.designProcess.finalDesign.images && (
@@ -779,10 +834,35 @@ const CaseStudy = () => {
                     </ul>
                   </div>
                 </div>
+                {/* Usability Study Plan Link */}
+                {project.usabilityStudy.usabilityStudyPlanLink && (
+                  <div className="text-center mb-8">
+                    <a
+                      href={project.usabilityStudy.usabilityStudyPlanLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300"
+                    >
+                      View Usability Study Plan
+                      <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                )}
                 {/* Session Images */}
                 <div className="mb-12 flex flex-col md:flex-row gap-8 justify-center items-center">
                   {project.usabilityStudy.sessionImages.map((img, i) => (
-                    <img key={i} src={getImageSource(img)} alt={`Usability study session ${i+1}`} className="rounded-xl shadow-lg w-full md:w-1/2 object-cover" />
+                    <div key={i} className="flex flex-col items-center">
+                      <img
+                        src={img.src ? img.src : getImageSource(img)}
+                        alt={`Usability study session ${i+1}`}
+                        className="rounded-xl shadow-lg w-full md:w-1/2 object-cover"
+                      />
+                      {img.caption && (
+                        <span className="mt-2 text-gray-600 text-sm italic">{img.caption}</span>
+                      )}
+                    </div>
                   ))}
                 </div>
                 {/* Findings */}
