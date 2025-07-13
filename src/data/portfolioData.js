@@ -34,6 +34,24 @@ import Highlight6 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight6.png";
 import Highlight7 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight7.png";
 import Highlight8 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight8.png";
 
+import RentWiseHero from "../assets/rentwise/rentwise-hero.jpg";
+import RentWiseUserJourney from "../assets/rentwise/rentwise-user-journey.png";
+import RentWiseInfoArch from "../assets/rentwise/information-architecture.png";
+import RentWiseHiFi from "../assets/rentwise/high-prototype.png";
+import RentWiseMain from "../assets/rentwise/rentwise.png";
+import RentWiseStoryboard1 from "../assets/rentwise/casestudy1.jpeg";
+import RentWiseStoryboard2 from "../assets/rentwise/casestudy2.jpeg";
+// import RentWisePaper1 from "../assets/rentwise/paper-wireframe1.jpeg";
+// import RentWisePaper2 from "../assets/rentwise/paper-wireframe2.jpeg";
+// import RentWiseDigital1 from "../assets/rentwise/digital-wireframe1.png";
+// import RentWiseDigital2 from "../assets/rentwise/digital-wireframe2.png";
+// import RentWiseLowFidelity from "../assets/rentwise/low-fidelity.png";
+// import RentWiseRefined1 from "../assets/rentwise/refined-design1.jpeg";
+// import RentWiseRefined2 from "../assets/rentwise/refined-design2.jpeg";
+// import RentWiseHiFi from "../assets/rentwise/high-fidelity.png";
+// import RentWiseUserJourneyMapRentWise from "../assets/rentwise/user-journey.png";
+
+
 export const portfolioData = [
     {
     id: "dixanafterschool",
@@ -370,6 +388,196 @@ export const portfolioData = [
         summary: "The Verbum Dei Admin Portal is a UI success story—demonstrating how thoughtful design systems, modular layout strategy, and accessibility best practices can transform legacy workflows into delightful admin experiences.",
         callToAction: "Looking to bring polish, usability, and structure to your internal platforms or data dashboards? Let's build it right—together."
     }
+    },
+    {
+        id: "rentwise",
+        title: "RentWise – Simplifying Home Rentals for Nigerians",
+        heroImage: RentWiseHero,
+
+        overview: {
+            duration: "August 2024 – December 2024",
+            summary: "A digital platform built to simplify the rental process for Nigerians by eliminating fraud, unnecessary agent fees, and scattered information—empowering both tenants and landlords to connect directly and securely.",
+            project: "The RentWise project began with one goal: to solve the stress of home renting in Nigeria. Inspired by Chinedu's real-world struggles, the platform was designed to provide verified listings, remove reliance on agents, and support landlords through a tech-light onboarding process.",
+            problem: "Chinedu, a 29-year-old civil engineer in Lagos, faced fake listings, hidden costs, and a lack of trust in online platforms. His frustrations were not unique—renting in Nigeria often meant dealing with emotional fatigue, fragmented information, and non-tech-savvy landlords.",
+            goal: "Create a user-friendly, trustworthy, and secure rental platform that simplifies property searches, builds trust with verified listings, and supports landlords unfamiliar with digital tools."
+        },
+
+        role: {
+            title: "Lead UX Designer",
+            responsibilities: [
+                "Conducted interviews and surveys across major Nigerian cities",
+                "Defined user pain points and opportunities",
+                "Built information architecture and user flows",
+                "Created wireframes, prototypes, and high-fidelity designs",
+                "Conducted usability testing and implemented design refinements"
+            ]
+        },
+
+        userResearch: {
+            summary: "Interviews and surveys were conducted across Lagos, Abuja, and Port Harcourt. While initial assumptions pointed to fraud and hidden costs, deeper insights revealed pain points such as landlord reluctance to adopt tech and emotional exhaustion from navigating scattered platforms.",
+            painPoints: [
+                {
+                    title: "Fake Listings",
+                    description: "Users like Chinedu found it hard to trust property listings due to common scams and deceptive photos."
+                },
+                {
+                    title: "Agent Dependency",
+                    description: "Unnecessary agent fees were a major frustration, especially when the agent provided little value."
+                },
+                {
+                    title: "Information Overload",
+                    description: "Property information was often scattered, inconsistent, or outdated, making comparisons hard."
+                },
+                {
+                    title: "Landlord Resistance",
+                    description: "Many landlords lacked digital literacy, avoiding platforms that required complex tools or onboarding."
+                }
+            ],
+            personas: [
+                {
+                    name: "Chinedu",
+                    type: "Tenant",
+                    image: RentWiseHero,
+                    description: "Chinedu is a young, hardworking civil engineer trying to rent his first home in Lagos. He values trust, transparency, and a straightforward process, but feels overwhelmed by scams and intermediaries.",
+                    goals: [
+                        "Find a trustworthy listing quickly",
+                        "Avoid agent fees and third-party interference",
+                        "Rent a home with peace of mind"
+                    ],
+                    frustrations: [
+                        "Skepticism toward online listings",
+                        "Wasting time with unverified information",
+                        "No centralized platform with end-to-end support"
+                    ]
+                }
+            ],
+            userJourneyMap: {
+                image: RentWiseUserJourney || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100",
+                description: "The map tracks Chinedu’s emotional and practical journey from beginning his search to securing a rental—highlighting friction points and moments of opportunity."
+            },
+            howMightWeStatements: [
+                "How might we help Chinedu quickly identify trusted listings?",
+                "How might we reduce his reliance on agents?",
+                "How might we support landlords who aren’t tech-savvy?",
+                "How might we centralize rental information for transparency and ease?"
+            ]
+        },
+
+        mappingExperience: {
+            informationArchitecture: {
+                image: RentWiseInfoArch || "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&fit=cover&auto=format&q=80&sat=100",
+                description: "I built a sitemap based on what users like Chinedu logically expected: Home > Listings > Messages > Bookings > Dashboard."
+            },
+            userFlows: {
+                tenantFlow: "Home → Search → Filter → Listing → Contact → Schedule → Apply",
+                landlordFlow: "Portal → Register → List → Manage → Finalize",
+                description: "These flows ensured Chinedu could complete tasks without friction or confusion."
+            }
+        },
+
+        designProcess: {
+            storyboard: {
+                description: "The storyboard captures Chinedu’s end-to-end rental experience, from discovering RentWise to successfully renting a home, visually mapping emotional highs and lows.",
+                images: [
+                    RentWiseStoryboard1,
+                    RentWiseStoryboard2
+                ]
+            },
+            paperWireframes: {
+                description: "Initial sketches focused on homepage and listings, exploring layouts with collapsed clutter, CTA clarity, and trust signals like verification badges.",
+                images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
+            },
+            digitalWireframes: {
+                description: "Brought early ideas to life using Balsamiq and Figma, showing key tenant and landlord flows, while exploring layout responsiveness and element hierarchy.",
+                images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
+            },
+            lowFidelityPrototype: {
+                description: "Tenants could search, filter, and book rentals. Landlords could onboard listings. The prototype tested scrollability, icon use, and core navigation.",
+                link: "https://www.figma.com/proto/rentwise-lowfi",
+                images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
+            }
+        },
+
+        usabilityStudy: {
+            details: {
+                researchQuestions: [
+                    "Can users find and filter properties with ease?",
+                    "Is the onboarding process intuitive for landlords?",
+                    "Are icons and navigation elements clear?",
+                    "What features improve user confidence in listings?",
+                    "Are tenants able to complete bookings without external help?"
+                ],
+                participants: [
+                    "Ten renters (ages 24–40), 2 landlords (ages 40–55), mixed digital proficiency",
+                    "Locations: Lagos, Abuja, Port Harcourt"
+                ],
+                methodology: [
+                    "Unmoderated usability testing",
+                    "Participants completed booking and listing tasks using the prototype",
+                    "Remote sessions, each lasting 10–15 minutes",
+                    "Observation + post-task survey"
+                ]
+            },
+            sessionImages: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"],
+            findings: [
+                {
+                    title: "Missed Filter Bar",
+                    description: "Users overlooked filters, so a sticky bar was introduced to improve visibility."
+                },
+                {
+                    title: "Too Many Icons",
+                    description: "Users were confused by excessive icons—simplified design followed."
+                },
+                {
+                    title: "Favorite Listings",
+                    description: "Users wanted to save listings for later—'Favorites' feature was added."
+                },
+                {
+                    title: "Landlord Onboarding",
+                    description: "Landlords felt unsure of what steps to take—progress indicators were implemented."
+                }
+            ]
+        },
+
+        refinedDesigns: {
+            description: "Based on testing feedback, we introduced sticky filters, simplified iconography, a Favorites section, and supportive onboarding with visual cues.",
+            images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
+        },
+
+        highFidelityPrototype: {
+            description: "Final designs featured verified badges, flexible booking CTAs, a clean dashboard for both users, and accessible landlord listing options.",
+            link: "https://www.figma.com/proto/rentwise-final",
+            screenshot: RentWiseHiFi || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"
+        },
+
+        accessibilityConsiderations: [
+            "High-contrast color palette for legibility",
+            "Keyboard navigation for power users",
+            "Alt text for all icons and images",
+            "Form field guidance for clarity and usability"
+        ],
+
+        takeaways: {
+            impact: "Testers responded with enthusiasm—'This is exactly what the Nigerian rental market needs—simple and scam-free.'",
+            whatILearned: "Designing for trust means going beyond UI—it's about clarity, empathy, and empowering users at every touchpoint.",
+            nextSteps: [
+                "Build a mobile-first MVP",
+                "Implement secure payments and rent tracking",
+                "Support landlords with bulk upload features",
+                "Integrate e-lease legal templates"
+            ]
+        },
+
+        conclusion: {
+            summary: "RentWise turned a common frustration into a seamless digital experience—empowering Nigerian renters and landlords to connect directly and securely without intermediaries or scams.",
+            connect: "Want to collaborate or explore UX challenges in real estate or emerging markets? Let’s connect.",
+            contact: {
+                email: "emmanuel.john@example.com",
+                behance: "https://www.behance.net/216671761/RentWise",
+                linkedin: "https://www.linkedin.com/in/emmanueljohn",
+                phone: "+234 000 000 0000"
+            }
+        }
     }, {
         id: "freshmclean",
         title: "FreshMclean",
@@ -518,208 +726,5 @@ export const portfolioData = [
             summary: "FreshMclean demonstrates how user-centered design can transform a traditional service industry. The platform successfully bridges the gap between homeowners and cleaning professionals, creating value for both parties.",
             connect: "Interested in learning more about this project or discussing similar challenges? Let's connect and explore how we can create impactful digital solutions together."
         }
-    },
-    // {
-    //     id: "rentwise",
-    //     title: "RentWise – Simplifying Home Rentals for Nigerians",
-    //     heroImage: RentWiseHero,
-
-    //     overview: {
-    //         duration: "August 2024 – December 2024",
-    //         summary: "A digital platform built to simplify the rental process for Nigerians by eliminating fraud, unnecessary agent fees, and scattered information—empowering both tenants and landlords to connect directly and securely.",
-    //         project: "The RentWise project began with one goal: to solve the stress of home renting in Nigeria. Inspired by Chinedu's real-world struggles, the platform was designed to provide verified listings, remove reliance on agents, and support landlords through a tech-light onboarding process.",
-    //         problem: "Chinedu, a 29-year-old civil engineer in Lagos, faced fake listings, hidden costs, and a lack of trust in online platforms. His frustrations were not unique—renting in Nigeria often meant dealing with emotional fatigue, fragmented information, and non-tech-savvy landlords.",
-    //         goal: "Create a user-friendly, trustworthy, and secure rental platform that simplifies property searches, builds trust with verified listings, and supports landlords unfamiliar with digital tools."
-    //     },
-
-    //     role: {
-    //         title: "Lead UX Designer",
-    //         responsibilities: [
-    //             "Conducted interviews and surveys across major Nigerian cities",
-    //             "Defined user pain points and opportunities",
-    //             "Built information architecture and user flows",
-    //             "Created wireframes, prototypes, and high-fidelity designs",
-    //             "Conducted usability testing and implemented design refinements"
-    //         ]
-    //     },
-
-    //     userResearch: {
-    //         summary: "Interviews and surveys were conducted across Lagos, Abuja, and Port Harcourt. While initial assumptions pointed to fraud and hidden costs, deeper insights revealed pain points such as landlord reluctance to adopt tech and emotional exhaustion from navigating scattered platforms.",
-    //         painPoints: [
-    //             {
-    //                 title: "Fake Listings",
-    //                 description: "Users like Chinedu found it hard to trust property listings due to common scams and deceptive photos."
-    //             },
-    //             {
-    //                 title: "Agent Dependency",
-    //                 description: "Unnecessary agent fees were a major frustration, especially when the agent provided little value."
-    //             },
-    //             {
-    //                 title: "Information Overload",
-    //                 description: "Property information was often scattered, inconsistent, or outdated, making comparisons hard."
-    //             },
-    //             {
-    //                 title: "Landlord Resistance",
-    //                 description: "Many landlords lacked digital literacy, avoiding platforms that required complex tools or onboarding."
-    //             }
-    //         ],
-    //         personas: [
-    //             {
-    //                 name: "Chinedu",
-    //                 type: "Tenant",
-    //                 image: RentWiseHero,
-    //                 description: "Chinedu is a young, hardworking civil engineer trying to rent his first home in Lagos. He values trust, transparency, and a straightforward process, but feels overwhelmed by scams and intermediaries.",
-    //                 goals: [
-    //                     "Find a trustworthy listing quickly",
-    //                     "Avoid agent fees and third-party interference",
-    //                     "Rent a home with peace of mind"
-    //                 ],
-    //                 frustrations: [
-    //                     "Skepticism toward online listings",
-    //                     "Wasting time with unverified information",
-    //                     "No centralized platform with end-to-end support"
-    //                 ]
-    //             }
-    //         ],
-    //         userJourneyMap: {
-    //             image: UserJourneyMapRentWise,
-    //             description: "The map tracks Chinedu’s emotional and practical journey from beginning his search to securing a rental—highlighting friction points and moments of opportunity."
-    //         },
-    //         howMightWeStatements: [
-    //             "How might we help Chinedu quickly identify trusted listings?",
-    //             "How might we reduce his reliance on agents?",
-    //             "How might we support landlords who aren’t tech-savvy?",
-    //             "How might we centralize rental information for transparency and ease?"
-    //         ]
-    //     },
-
-    //     mappingExperience: {
-    //         informationArchitecture: {
-    //             description: "I built a sitemap based on what users like Chinedu logically expected: Home > Listings > Messages > Bookings > Dashboard."
-    //         },
-    //         userFlows: {
-    //             tenantFlow: "Home → Search → Filter → Listing → Contact → Schedule → Apply",
-    //             landlordFlow: "Portal → Register → List → Manage → Finalize",
-    //             description: "These flows ensured Chinedu could complete tasks without friction or confusion."
-    //         }
-    //     },
-
-    //     designProcess: {
-    //         storyboard: {
-    //             description: "The storyboard captures Chinedu’s end-to-end rental experience, from discovering RentWise to successfully renting a home, visually mapping emotional highs and lows.",
-    //             images: [
-    //                 RentWiseStoryboard1,
-    //                 RentWiseStoryboard2
-    //             ]
-    //         },
-    //         paperWireframes: {
-    //             description: "Initial sketches focused on homepage and listings, exploring layouts with collapsed clutter, CTA clarity, and trust signals like verification badges.",
-    //             images: [
-    //                 RentWisePaper1,
-    //                 RentWisePaper2
-    //             ]
-    //         },
-    //         digitalWireframes: {
-    //             description: "Brought early ideas to life using Balsamiq and Figma, showing key tenant and landlord flows, while exploring layout responsiveness and element hierarchy.",
-    //             images: [
-    //                 RentWiseDigital1,
-    //                 RentWiseDigital2
-    //             ]
-    //         },
-    //         lowFidelityPrototype: {
-    //             description: "Tenants could search, filter, and book rentals. Landlords could onboard listings. The prototype tested scrollability, icon use, and core navigation.",
-    //             link: "https://www.figma.com/proto/rentwise-lowfi",
-    //             images: [
-    //                 RentWiseLowFidelity
-    //             ]
-    //         }
-    //     },
-
-    //     usabilityStudy: {
-    //         details: {
-    //             researchQuestions: [
-    //                 "Can users find and filter properties with ease?",
-    //                 "Is the onboarding process intuitive for landlords?",
-    //                 "Are icons and navigation elements clear?",
-    //                 "What features improve user confidence in listings?",
-    //                 "Are tenants able to complete bookings without external help?"
-    //             ],
-    //             participants: [
-    //                 "Ten renters (ages 24–40), 2 landlords (ages 40–55), mixed digital proficiency",
-    //                 "Locations: Lagos, Abuja, Port Harcourt"
-    //             ],
-    //             methodology: [
-    //                 "Unmoderated usability testing",
-    //                 "Participants completed booking and listing tasks using the prototype",
-    //                 "Remote sessions, each lasting 10–15 minutes",
-    //                 "Observation + post-task survey"
-    //             ]
-    //         },
-    //         sessionImages: [
-    //             UsabilityTestRentWise1,
-    //             UsabilityTestRentWise2
-    //         ],
-    //         findings: [
-    //             {
-    //                 title: "Missed Filter Bar",
-    //                 description: "Users overlooked filters, so a sticky bar was introduced to improve visibility."
-    //             },
-    //             {
-    //                 title: "Too Many Icons",
-    //                 description: "Users were confused by excessive icons—simplified design followed."
-    //             },
-    //             {
-    //                 title: "Favorite Listings",
-    //                 description: "Users wanted to save listings for later—'Favorites' feature was added."
-    //             },
-    //             {
-    //                 title: "Landlord Onboarding",
-    //                 description: "Landlords felt unsure of what steps to take—progress indicators were implemented."
-    //             }
-    //         ]
-    //     },
-
-    //     refinedDesigns: {
-    //         description: "Based on testing feedback, we introduced sticky filters, simplified iconography, a Favorites section, and supportive onboarding with visual cues.",
-    //         images: [
-    //             RentWiseRefined1,
-    //             RentWiseRefined2
-    //         ]
-    //     },
-
-    //     highFidelityPrototype: {
-    //         description: "Final designs featured verified badges, flexible booking CTAs, a clean dashboard for both users, and accessible landlord listing options.",
-    //         link: "https://www.figma.com/proto/rentwise-final",
-    //         screenshot: RentWiseHiFi
-    //     },
-
-    //     accessibilityConsiderations: [
-    //         "High-contrast color palette for legibility",
-    //         "Keyboard navigation for power users",
-    //         "Alt text for all icons and images",
-    //         "Form field guidance for clarity and usability"
-    //     ],
-
-    //     takeaways: {
-    //         impact: "Testers responded with enthusiasm—'This is exactly what the Nigerian rental market needs—simple and scam-free.'",
-    //         whatILearned: "Designing for trust means going beyond UI—it's about clarity, empathy, and empowering users at every touchpoint.",
-    //         nextSteps: [
-    //             "Build a mobile-first MVP",
-    //             "Implement secure payments and rent tracking",
-    //             "Support landlords with bulk upload features",
-    //             "Integrate e-lease legal templates"
-    //         ]
-    //     },
-
-    //     conclusion: {
-    //         summary: "RentWise turned a common frustration into a seamless digital experience—empowering Nigerian renters and landlords to connect directly and securely without intermediaries or scams.",
-    //         connect: "Want to collaborate or explore UX challenges in real estate or emerging markets? Let’s connect.",
-    //         contact: {
-    //             email: "emmanuel.john@example.com",
-    //             behance: "https://www.behance.net/216671761/RentWise",
-    //             linkedin: "https://www.linkedin.com/in/emmanueljohn",
-    //             phone: "+234 000 000 0000"
-    //         }
-    //     }
-    // }
+    }
 ]; 
