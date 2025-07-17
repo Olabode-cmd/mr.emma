@@ -1,5 +1,4 @@
-import FreshMclean from "../assets/freshmclean.png";
-
+// import FreshMclean from "../assets/freshmclean.png";
 export const userData = {
     name: "Mr Emmanuel",
     position: "UI/UX Designer",
@@ -13,7 +12,7 @@ export const userData = {
         "Experience Architect",
     ],
     bio: "Passionate about crafting intuitive and engaging digital experiences that bridge the gap between users and technology. With a focus on user-centered design, I help brands bring their visions to life.",
-    yearsOfExperience: 5,
+    yearsOfExperience: 3,
     projectsCompleted: 27,
     contactEmail: "naomi@example.com",
     location: "Lagos, Nigeria",

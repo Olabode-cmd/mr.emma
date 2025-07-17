@@ -41,15 +41,7 @@ import RentWiseHiFi from "../assets/rentwise/high-prototype.png";
 import RentWiseMain from "../assets/rentwise/rentwise.png";
 import RentWiseStoryboard1 from "../assets/rentwise/casestudy1.jpeg";
 import RentWiseStoryboard2 from "../assets/rentwise/casestudy2.jpeg";
-// import RentWisePaper1 from "../assets/rentwise/paper-wireframe1.jpeg";
-// import RentWisePaper2 from "../assets/rentwise/paper-wireframe2.jpeg";
-// import RentWiseDigital1 from "../assets/rentwise/digital-wireframe1.png";
-// import RentWiseDigital2 from "../assets/rentwise/digital-wireframe2.png";
-// import RentWiseLowFidelity from "../assets/rentwise/low-fidelity.png";
-// import RentWiseRefined1 from "../assets/rentwise/refined-design1.jpeg";
-// import RentWiseRefined2 from "../assets/rentwise/refined-design2.jpeg";
-// import RentWiseHiFi from "../assets/rentwise/high-fidelity.png";
-// import RentWiseUserJourneyMapRentWise from "../assets/rentwise/user-journey.png";
+
 
 
 export const portfolioData = [
@@ -600,6 +592,7 @@ export const portfolioData = [
                 "Collaborated with developers for successful implementation"
             ]
         },
+        prdLink: "https://docs.google.com/document/d/1JN_FeZcmjFa80bhxkrC0GEH9guBWwNRncnr5oYVnVwI/edit?usp=sharing",
 
         userResearch: {
             summary: "Our research involved interviews with 25 homeowners and 15 cleaning professionals across major German cities. We also analyzed competitor platforms and conducted surveys to understand user needs and pain points.",
