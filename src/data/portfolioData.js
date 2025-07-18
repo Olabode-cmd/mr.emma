@@ -383,16 +383,27 @@ export const portfolioData = [
     },
     {
         id: "rentwise",
-        title: "RentWise – Simplifying Home Rentals for Nigerians",
+        title: "RentWise - Simplifying Home Rentals for Nigerians",
         heroImage: RentWiseHero,
 
         overview: {
-            duration: "August 2024 – December 2024",
+            duration: "August 2024 - December 2024",
             summary: "A digital platform built to simplify the rental process for Nigerians by eliminating fraud, unnecessary agent fees, and scattered information—empowering both tenants and landlords to connect directly and securely.",
             project: "The RentWise project began with one goal: to solve the stress of home renting in Nigeria. Inspired by Chinedu's real-world struggles, the platform was designed to provide verified listings, remove reliance on agents, and support landlords through a tech-light onboarding process.",
-            problem: "Chinedu, a 29-year-old civil engineer in Lagos, faced fake listings, hidden costs, and a lack of trust in online platforms. His frustrations were not unique—renting in Nigeria often meant dealing with emotional fatigue, fragmented information, and non-tech-savvy landlords.",
+            problem: `In the heart of Lagos, renting a home is often more stressful than it should be. Chinedu, a 29-year-old civil engineer, thought he was prepared for the apartment hunt. But what he encountered was a maze of fake listings, hidden charges, and unresponsive agents. Each new lead came with uncertainty—and unexpected costs like agency and legal fees that pushed the price far beyond his budget.\nChinedu’s story is far too common. For many tenants in Lagos, the rental process is overwhelming and emotionally draining. Information is scattered, communication is slow, and the involvement of multiple intermediaries only adds to the confusion and cost. What should be a straightforward search for a home becomes a frustrating, time-consuming ordeal.\nThe current system fails renters. It lacks transparency, efficiency, and trust. What’s urgently needed is a digital-first, user-friendly solution that simplifies the rental journey—cutting through the noise, reducing costs, and helping people like Chinedu find a home without the stress.`,
             goal: "Create a user-friendly, trustworthy, and secure rental platform that simplifies property searches, builds trust with verified listings, and supports landlords unfamiliar with digital tools."
         },
+        prdLink: "https://docs.google.com/document/d/1mcvaDsPO6G6aGa_84oKrs1RtZzBj0CnbYvSuqXAZaMg/edit?usp=sharing",
+        userStories: [
+            {
+                title: "User Story 1 – The Budget-Conscious Tenant",
+                description: "As a first-time renter in Lagos with a limited monthly income, I want to quickly find verified listings within my budget so that I don’t waste time on scams or over-priced apartments."
+            },
+            {
+                title: "User Story 2 – The Pet Owner and Working Professional",
+                description: "As a busy professional with a dog, I want to filter for pet-friendly apartments and book virtual tours, so that I can confidently secure a home that accommodates my pet."
+            }
+        ],
 
         role: {
             title: "Lead UX Designer",
@@ -452,7 +463,8 @@ export const portfolioData = [
                 "How might we reduce his reliance on agents?",
                 "How might we support landlords who aren’t tech-savvy?",
                 "How might we centralize rental information for transparency and ease?"
-            ]
+            ],
+            images: [RentWiseStoryboard1, RentWiseStoryboard2]
         },
 
         mappingExperience: {
@@ -471,8 +483,8 @@ export const portfolioData = [
             storyboard: {
                 description: "The storyboard captures Chinedu’s end-to-end rental experience, from discovering RentWise to successfully renting a home, visually mapping emotional highs and lows.",
                 images: [
-                    RentWiseStoryboard1,
-                    RentWiseStoryboard2
+                    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&fit=cover&auto=format&q=80&sat=100",
+                    "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800&fit=cover&auto=format&q=80&sat=100"
                 ]
             },
             paperWireframes: {
@@ -511,6 +523,8 @@ export const portfolioData = [
                 ]
             },
             sessionImages: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"],
+            impactStatement: `The RentWise usability study revealed strong outcomes across key metrics. 95% of participants successfully completed tasks like searching, saving, and applying for rentals without external assistance.\nAverage time on task was just 3.2 minutes, demonstrating quick user comprehension. The System Usability Scale (SUS) score averaged 88/100, reflecting high satisfaction and ease of use. Drop-off rate decreased by 40% after design refinements, while task confidence increased by 60%, particularly during filtering and application flows.\n\nParticipants praised the clean layout, verified listings, and scam-free experience. These results confirm RentWise as a fast, reliable, and user-friendly platform tailored to the real needs of Nigerian renters.`,
+            usabilityStudyPlanLink: "https://docs.google.com/document/d/1dYh9Fp5xsMYBZwCMpWWfRfVcII6MIBoaM-SjGncZKFc/edit?usp=sharing",
             findings: [
                 {
                     title: "Missed Filter Bar",
@@ -538,8 +552,8 @@ export const portfolioData = [
 
         highFidelityPrototype: {
             description: "Final designs featured verified badges, flexible booking CTAs, a clean dashboard for both users, and accessible landlord listing options.",
-            link: "https://www.figma.com/proto/rentwise-final",
-            screenshot: RentWiseHiFi || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"
+            link: "https://www.figma.com/proto/Li9mXcpNjhupBAUEkgvKtr/Rent-Wise?node-id=753-15770&t=7xcFM9lqtWTNHUqV-0&scaling=scale-down&content-scaling=fixed&page-id=3%3A29&starting-point-node-id=302%3A1802&show-proto-sidebar=1",
+            screenshot: "https://www.figma.com/proto/Li9mXcpNjhupBAUEkgvKtr/Rent-Wise?node-id=753-15770&t=7xcFM9lqtWTNHUqV-0&scaling=scale-down&content-scaling=fixed&page-id=3%3A29&starting-point-node-id=302%3A1802&show-proto-sidebar=1"
         },
 
         accessibilityConsiderations: [

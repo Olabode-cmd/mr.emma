@@ -17,7 +17,7 @@ export const userData = {
     contactEmail: "naomi@example.com",
     location: "Lagos, Nigeria",
     socials: {
-        linkedin: "https://www.linkedin.com/in/naomicreates",
+        linkedin: "https://www.linkedin.com/in/john-emmanuel-3327a11a1",
         dribbble: "https://dribbble.com/naomicreates",
         behance: "https://www.behance.net/naomicreates",
     },

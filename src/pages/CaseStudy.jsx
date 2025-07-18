@@ -173,6 +173,7 @@ const CaseStudy = () => {
                     />
                   </svg>
                 </a>
+                <div className="mt-8 text-center text-xl text-gray-700 font-semibold">Other details coming soon.</div>
               </section>
             )}
 
@@ -190,6 +191,22 @@ const CaseStudy = () => {
                         <p className="text-gray-600 mb-8">
                           {project.userResearch.summary}
                         </p>
+                        {/* User Research Images Section */}
+                        {project.userResearch.images && project.userResearch.images.length > 0 && (
+                          <div className="mb-12">
+                            {/* <h3 className="text-2xl font-semibold text-gray-900 mb-6">User Research Images</h3> */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                              {project.userResearch.images.map((img, idx) => (
+                                <img
+                                  key={idx}
+                                  src={getImageSource(img)}
+                                  alt={`User research ${idx + 1}`}
+                                  className="rounded-lg shadow-lg w-full h-[350px] object-cover"
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        )}
 
                         {/* Pain Points */}
                         {project.userResearch.painPoints && (
