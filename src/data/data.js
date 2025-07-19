@@ -13,7 +13,7 @@ export const userData = {
     ],
     bio: "Passionate about crafting intuitive and engaging digital experiences that bridge the gap between users and technology. With a focus on user-centered design, I help brands bring their visions to life.",
     yearsOfExperience: 3,
-    projectsCompleted: 27,
+    projectsCompleted: 18,
     contactEmail: "naomi@example.com",
     location: "Lagos, Nigeria",
     socials: {

@@ -13,21 +13,21 @@ const PortfolioCard = ({ project, isReversed }) => {
       </div>
 
       <div className={`flex flex-col ${isReversed ? 'lg:pr-12' : 'lg:pl-12'}`}>
-        <span className="px-3 py-1 text-sm font-medium text-purple-700 bg-purple-50 rounded-full w-fit mb-6">
+        {/* <span className="px-3 py-1 text-sm font-medium text-purple-700 bg-purple-50 rounded-full w-fit mb-6">
           {project.projectType}
-        </span>
+        </span> */}
 
-        <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">
+        <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">
           {project.title}
         </h3>
 
-        <p className="text-gray-600 text-lg mb-8">
+        <p className="text-gray-600 text-sm md:text-lg leading-6 md:leading-8 mb-8">
           {project.overview.summary}
         </p>
 
         <Link
           to={`/portfolio/${project.id}`}
-          className="inline-flex items-center text-purple-700 font-medium hover:text-purple-900 transition-colors duration-300 mt-auto group/link"
+          className="inline-flex text-sm md:text-base items-center text-purple-700 font-medium hover:text-purple-900 transition-colors duration-300 mt-auto group/link"
         >
           View Case Study
           <svg

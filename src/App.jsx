@@ -52,7 +52,7 @@ const HeroSection = () => {
               />
             </span>
           </h1>
-          <p className="text-2xl text-gray-700 mb-12">
+          <p className="text-lg md:text-2xl text-gray-700 mb-12">
             with a passion for creating thoughtful and visually stunning digital
             experiences.
           </p>
@@ -67,7 +67,7 @@ const BioSection = () => {
     <div className="bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl mx-auto text-center">
-          <p data-aos="fade-up" className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+          <p data-aos="fade-up" className="text-base md:text-2xl text-gray-700 leading-relaxed">
             {userData.bio}
           </p>
           <div className="mt-12 grid grid-cols-2 gap-8">
@@ -75,13 +75,13 @@ const BioSection = () => {
               <p className="text-5xl font-bold text-purple-600">
                 {userData.yearsOfExperience}+
               </p>
-              <p className="text-gray-600">Years of Experience</p>
+              <p className="text-sm md:text-base text-gray-600">Years of Experience</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="200">
               <p className="text-5xl font-bold text-purple-600">
                 {userData.projectsCompleted}+
               </p>
-              <p className="text-gray-600">Projects Completed</p>
+              <p className="text-sm md:text-base text-gray-600">Projects Completed</p>
             </div>
           </div>
         </div>
