@@ -27,7 +27,7 @@ const Footer = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">
               Let's bring your ideas to life
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-lg">
+            <p className="text-sm md:text-xl text-purple-100 mb-8 max-w-lg">
               Have a project in mind? I'm always open to discussing new
               opportunities and creative collaborations.
             </p>
@@ -35,14 +35,14 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a
                 href={`mailto:${userData.contactEmail}`}
-                className="inline-flex items-center justify-center px-6 py-3 bg-white text-purple-900 font-medium rounded-lg hover:bg-purple-50 transition group"
+                className="inline-flex text-sm md:text-base items-center justify-center px-6 py-3 bg-white text-purple-900 font-medium rounded-lg hover:bg-purple-50 transition group"
               >
                 <Mail size={18} className="mr-2" />
                 Send Email
               </a>
               <a
                 href="#"
-                className="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition group"
+                className="inline-flex text-sm md:text-base items-center justify-center px-6 py-3 bg-transparent border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition group"
               >
                 <span>Schedule a Call</span>
                 <ArrowRight
