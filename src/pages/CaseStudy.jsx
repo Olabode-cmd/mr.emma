@@ -259,19 +259,6 @@ const CaseStudy = () => {
                           </div>
                         )}
 
-                        {project.empathyMap && (
-                          <section className="my-12">
-                            <h1 className="text-sm md:text-2xl font-semibold text-center">User Empathy Map</h1>
-                            <p className="text-gray-600 text-center mb-12 leading-relaxed">
-                              {project.empathyMap.description}
-                            </p>
-
-                            <img src={project.empathyMap.image} alt="empathy map image" className='mx-auto max-w-6xl h-[350px]' />
-
-
-                          </section>
-                        )}
-
                         {/* Personas */}
                         {project.userResearch.personas && (
                           <div className="mb-12">
@@ -362,6 +349,19 @@ const CaseStudy = () => {
                               )}
                             </div>
                           </div>
+                        )}
+
+
+                        {project.empathyMap && (
+                          <section className="my-12">
+                            <h1 className="text-sm md:text-2xl font-semibold text-center">User Empathy Map</h1>
+                            <p className="text-gray-600 text-center mb-12 leading-relaxed">
+                              {project.empathyMap.description}
+                            </p>
+
+                            <img src={project.empathyMap.image} alt="empathy map image" className='mx-auto max-w-6xl h-[350px]' />
+
+                          </section>
                         )}
 
 
