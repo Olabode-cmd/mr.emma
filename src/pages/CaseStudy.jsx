@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { portfolioData } from '../data/portfolioData';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
@@ -18,7 +18,7 @@ const CaseStudy = () => {
   const { id } = useParams();
   const project = portfolioData.find(p => p.id === id);
   const isFreshMclean = project && project.id === "freshmclean" && project.prdLink;
-  
+
   if (!project) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -96,23 +96,29 @@ const CaseStudy = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                    Project Details
-                  </h3>
-                  <div className="space-y-4">
-                    <div>
-                      <p className="text-sm text-gray-500">Duration</p>
-                      <p className="text-gray-900 font-medium">
-                        {project.overview.duration}
-                      </p>
+                <div>
+                  <div className="bg-gray-50 p-8 rounded-xl">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-6">
+                      Project Details
+                    </h3>
+                    <div className="space-y-4">
+                      <div>
+                        <p className="text-sm text-gray-500">Duration</p>
+                        <p className="text-gray-900 font-medium">
+                          {project.overview.duration}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">Role</p>
+                        <p className="text-gray-900 font-medium">
+                          {project.role.title}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Role</p>
-                      <p className="text-gray-900 font-medium">
-                        {project.role.title}
-                      </p>
-                    </div>
+                  </div>
+
+                  <div className='mt-4'>
+                    <Link className='px-3 py-2 text-white w-full rounded-full bg-purple-500 mt-3 block text-center' to="https://docs.google.com/document/d/1mcvaDsPO6G6aGa_84oKrs1RtZzBj0CnbYvSuqXAZaMg/edit?usp=sharing" target='_blank'>Open PRD</Link>
                   </div>
                 </div>
               </div>
@@ -253,6 +259,19 @@ const CaseStudy = () => {
                           </div>
                         )}
 
+                        {project.empathyMap && (
+                          <section className="my-12">
+                            <h1 className="text-sm md:text-2xl font-semibold text-center">User Empathy Map</h1>
+                            <p className="text-gray-600 text-center mb-12 leading-relaxed">
+                              {project.empathyMap.description}
+                            </p>
+
+                            <img src={project.empathyMap.image} alt="empathy map image" className='mx-auto max-w-6xl h-[350px]' />
+
+
+                          </section>
+                        )}
+
                         {/* Personas */}
                         {project.userResearch.personas && (
                           <div className="mb-12">
@@ -345,6 +364,7 @@ const CaseStudy = () => {
                           </div>
                         )}
 
+
                         {/* User Journey Map */}
                         {project.userResearch.userJourneyMap && (
                           <div>
@@ -372,7 +392,7 @@ const CaseStudy = () => {
                         {/* How Might We Statements */}
                         {project.userResearch.howMightWeStatements &&
                           project.userResearch.howMightWeStatements.length >
-                            0 && (
+                          0 && (
                             <div className="mt-16 mb-12">
                               <h3 className="text-2xl font-semibold text-gray-900 mb-8">
                                 How Might We Statements
@@ -704,7 +724,7 @@ const CaseStudy = () => {
                     <div className="mb-20">
                       <div className="max-w-3xl mx-auto text-center mb-12">
                         <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                          Storyboard
+                          User flows
                         </h3>
                         <p className="text-gray-600 leading-relaxed">
                           {project.designProcess.storyboard.description}
@@ -712,14 +732,13 @@ const CaseStudy = () => {
                       </div>
                       <div className="max-w-6xl mx-auto">
                         <div
-                          className={`grid ${
-                            project.designProcess.storyboard.images.length <= 2
-                              ? "grid-cols-2"
-                              : project.designProcess.storyboard.images
-                                  .length >= 5
+                          className={`grid ${project.designProcess.storyboard.images.length <= 2
+                            ? "grid-cols-1"
+                            : project.designProcess.storyboard.images
+                              .length >= 5
                               ? "grid-cols-5"
                               : `grid-cols-${project.designProcess.storyboard.images.length}`
-                          } gap-10 justify-center`}
+                            } gap-10 justify-center`}
                         >
                           {project.designProcess.storyboard.images.map(
                             (image, index) => (
@@ -740,6 +759,23 @@ const CaseStudy = () => {
                     </div>
                   )}
 
+                  {project.designProcess.informationArchitecture && (
+                    <div className='mb-6'>
+                      <div className="max-w-3xl mx-auto text-center mb-12">
+                        <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                          Information Architecture
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {project.designProcess.informationArchitecture.description}
+                        </p>
+                      </div>
+
+                      <div>
+                        <img src={project.designProcess.informationArchitecture.image} alt="information architecture image" className="max-w-6xl mx-auto rounded-md my-4" />
+                      </div>
+                    </div>
+                  )}
+
                   {/* Paper Wireframes - Only render if it exists */}
                   {project.designProcess.paperWireframes && (
                     <div className="mb-20">
@@ -753,15 +789,14 @@ const CaseStudy = () => {
                       </div>
                       <div className="max-w-5xl mx-auto">
                         <div
-                          className={`grid ${
-                            project.designProcess.paperWireframes.images
-                              .length <= 2
-                              ? "grid-cols-2"
-                              : project.designProcess.paperWireframes.images
-                                  .length >= 5
-                              ? "grid-cols-5"
+                          className={`grid ${project.designProcess.paperWireframes.images
+                            .length <= 2
+                            ? "grid-cols-2"
+                            : project.designProcess.paperWireframes.images
+                              .length >= 4
+                              ? "grid-cols-4"
                               : `grid-cols-${project.designProcess.paperWireframes.images.length}`
-                          } gap-10 justify-center`}
+                            } gap-10 justify-center`}
                         >
                           {project.designProcess.paperWireframes.images.map(
                             (image, index) => (
@@ -795,15 +830,14 @@ const CaseStudy = () => {
                       </div>
                       <div className="max-w-5xl mx-auto">
                         <div
-                          className={`grid ${
-                            project.designProcess.digitalWireframes.images
-                              .length <= 2
-                              ? "grid-cols-2"
-                              : project.designProcess.digitalWireframes.images
-                                  .length >= 5
+                          className={`grid ${project.designProcess.digitalWireframes.images
+                            .length <= 2
+                            ? "grid-cols-2"
+                            : project.designProcess.digitalWireframes.images
+                              .length >= 5
                               ? "grid-cols-5"
                               : `grid-cols-${project.designProcess.digitalWireframes.images.length}`
-                          } gap-10 justify-center`}
+                            } gap-10 justify-center`}
                         >
                           {project.designProcess.digitalWireframes.images.map(
                             (image, index) => (
@@ -867,7 +901,7 @@ const CaseStudy = () => {
                       </div>
                       <div className="max-w-5xl mx-auto mb-10">
                         <div>
-                          {project.designProcess.lowFidelityPrototype.images.map(
+                          {project.designProcess.lowFidelityPrototype.images && project.designProcess.lowFidelityPrototype.images.map(
                             (image, index) => (
                               <div
                                 key={index}
@@ -898,33 +932,33 @@ const CaseStudy = () => {
                         </p>
                         {project.designProcess.usabilityFeedback
                           .usabilityStudyPlanLink && (
-                          <div className="mt-4">
-                            <a
-                              href={
-                                project.designProcess.usabilityFeedback
-                                  .usabilityStudyPlanLink
-                              }
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300"
-                            >
-                              View Usability Study Plan
-                              <svg
-                                className="w-5 h-5 ml-2"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
+                            <div className="mt-4">
+                              <a
+                                href={
+                                  project.designProcess.usabilityFeedback
+                                    .usabilityStudyPlanLink
+                                }
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300"
                               >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        )}
+                                View Usability Study Plan
+                                <svg
+                                  className="w-5 h-5 ml-2"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          )}
                       </div>
 
                       <div className="max-w-4xl mx-auto">
@@ -1028,7 +1062,7 @@ const CaseStudy = () => {
                           Visual Highlights
                         </h4>
                         {project.id === "verbumdei_ui_admin" &&
-                        project.designProcess.finalDesign.visualHighlights ? (
+                          project.designProcess.finalDesign.visualHighlights ? (
                           <>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                               {project.designProcess.finalDesign.visualHighlights.map(
@@ -1313,44 +1347,65 @@ const CaseStudy = () => {
                 )}
 
                 {/* High-Fidelity Prototype */}
-                <section className="mb-20">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                    High-Fidelity Prototype
-                  </h2>
-                  <p className="text-gray-600 mb-8">
-                    {project.highFidelityPrototype.description}
-                  </p>
-                  <div className="mb-6">
-                    <img
-                      src={getImageSource(
-                        project.highFidelityPrototype.screenshot
-                      )}
-                      alt="High-fidelity prototype screenshot"
-                      className="rounded-lg shadow-lg w-full"
-                    />
-                  </div>
-                  <a
-                    href={project.highFidelityPrototype.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-purple-600 hover:text-purple-700"
-                  >
-                    View Prototype
-                    <svg
-                      className="w-5 h-5 ml-2"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                {project.highFidelityPrototype && (
+                  <section className="mb-20">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                      High-Fidelity Prototype
+                    </h2>
+                    <p className="text-gray-600 mb-8">
+                      {project.highFidelityPrototype.description}
+                    </p>
+                    <div className="mb-6">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {project.highFidelityPrototype.images && project.highFidelityPrototype.images.map((image) => (
+                          <div className='px-3 py-2'>
+                            <img src={image} alt="high fidelity image" className='w-full h-full object-cover' />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <a
+                      href={project.highFidelityPrototype.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-purple-600 hover:text-purple-700"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                </section>
+                      View Prototype
+                      <svg
+                        className="w-5 h-5 ml-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  </section>
+                )}
+
+                {project.mockups && (
+                  <section className='mb-20'>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                      Mockups
+                    </h2>
+                    <p className="text-gray-600 mb-8">
+                      {project.mockups.description}
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      {project.mockups.images.map((image) => (
+                        <div className='px-3 py-2 overflow-hidden'>
+                          <img src={image} alt="mockup image" className='w-full h-full object-cover hover:scale-[1.05] duration-150' />
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
 
                 {/* Accessibility Considerations - Only render if it exists */}
                 {project.accessibilityConsiderations && (

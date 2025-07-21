@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import User from './assets/mr.emma.jpg';
+import { userData } from "./data/data";
 
 const AboutPage = () => {
   return (
@@ -10,6 +11,7 @@ const AboutPage = () => {
       <main>
         <AboutHeroSection />
         <ExpertiseSection />
+        <SkillsSection />
         <CollaborationSection />
         <EducationCertSection />
       </main>
@@ -55,6 +57,70 @@ const AboutHeroSection = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SkillsSection = () => {
+  return (
+    <div className="bg-gray-50 py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skillset</h2>
+          <div className="w-24 h-1 bg-purple-600 mx-auto"></div>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {userData.skillset.map((skill, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <div className="h-16 w-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 3H5C3.89543 3 3 3.89543 3 5V9C3 10.1046 3.89543 11 5 11H9C10.1046 11 11 10.1046 11 9V5C11 3.89543 10.1046 3 9 3Z"
+                    stroke="#7C3AED"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M9 13H5C3.89543 13 3 13.8954 3 15V19C3 20.1046 3.89543 21 5 21H9C10.1046 21 11 20.1046 11 19V15C11 13.8954 10.1046 13 9 13Z"
+                    stroke="#7C3AED"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M19 3H15C13.8954 3 13 3.89543 13 5V9C13 10.1046 13.8954 11 15 11H19C20.1046 11 21 10.1046 21 9V5C21 3.89543 20.1046 3 19 3Z"
+                    stroke="#7C3AED"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M19 13H15C13.8954 13 13 13.8954 13 15V19C13 20.1046 13.8954 21 15 21H19C20.1046 21 21 20.1046 21 19V15C21 13.8954 20.1046 13 19 13Z"
+                    stroke="#7C3AED"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <p className="font-medium">{skill}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -121,10 +187,6 @@ const EducationCertSection = () => (
       <div className="mb-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Education & Certifications</h2>
         <div className="w-24 h-1 bg-purple-600 mx-auto"></div>
-      </div>
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-2">LinkedIn Profile Link:</h3>
-        <a href="https://www.linkedin.com/in/john-emmanuel-3327a11a1" target="_blank" rel="noopener noreferrer" className="text-purple-700 underline break-all">www.linkedin.com/in/john-emmanuel-3327a11a1</a>
       </div>
       <div className="mb-8">
         <h3 className="text-xl font-semibold mb-2">Education</h3>

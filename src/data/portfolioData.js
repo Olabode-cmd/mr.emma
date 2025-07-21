@@ -24,6 +24,7 @@ import VerbumDeiWireframe1 from "../assets/verbumdei/wireframe1.png";
 import VerbumDeiWireframe2 from "../assets/verbumdei/wireframe2.png";
 import VerbumDeiWireframe3 from "../assets/verbumdei/wireframe3.png";
 import VerbumDeiPrototype from "../assets/verbumdei/prototypeimg.png";
+
 // Add highlight images for Verbum Dei visual highlights
 import Highlight1 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight1.png";
 import Highlight2 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight2.png";
@@ -34,13 +35,41 @@ import Highlight6 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight6.png";
 import Highlight7 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight7.png";
 import Highlight8 from "../assets/verbumdei/Verbum-Dei-Mock-up/highlight8.png";
 
+// Rentiwse images
 import RentWiseHero from "../assets/rentwise/rentwise-hero.jpg";
 import RentWiseUserJourney from "../assets/rentwise/rentwise-user-journey.png";
+import RentWiseUserFlow from "../assets/rentwise/rentwise-user-flow.png";
+import RentWiseInformationArchitecture from "../assets/rentwise/information-architecture.png";
 import RentWiseInfoArch from "../assets/rentwise/information-architecture.png";
-import RentWiseHiFi from "../assets/rentwise/high-prototype.png";
-import RentWiseMain from "../assets/rentwise/rentwise.png";
+import RentWiseHiFiChat from "../assets/rentwise/high-fidelity/Chat.png";
+import RentWiseHiFiContactOwner from "../assets/rentwise/high-fidelity/contact-owner.png";
+import RentWiseHiFiDashboardProperty from "../assets/rentwise/high-fidelity/dashboard-property.png";
+import RentWiseHiFiEReceipt from "../assets/rentwise/high-fidelity/e-receipt.png";
+import RentWiseHiFiProfile from "../assets/rentwise/high-fidelity/Profile.png";
+import RentWiseHiFiPropertyDetails from "../assets/rentwise/high-fidelity/property-details.png";
+import RentWiseHiFiPropertyListings from "../assets/rentwise/high-fidelity/property-listings.png";
+import RentWiseHiFiRecentMaintainance from "../assets/rentwise/high-fidelity/recent-maintainance.png";
+import RentWiseHiFiRentProperty from "../assets/rentwise/high-fidelity/rent-property.png";
+import RentWiseHiFiScheduleInspection from "../assets/rentwise/high-fidelity/schedule-inspection.png";
+import RentWiseHiFiSettings from "../assets/rentwise/high-fidelity/Settings.png";
+import RentWiseMain from "../assets/rentwise/rentwise-user-flow.png";
 import RentWiseStoryboard1 from "../assets/rentwise/casestudy1.jpeg";
 import RentWiseStoryboard2 from "../assets/rentwise/casestudy2.jpeg";
+
+import RentWiseEmpathyMap from "../assets/rentwise/empathy-map/empathy-map.jpg"
+
+// Rentwise low fidelity
+import RentwiseLow2 from "../assets/rentwise/low-fidelity/low-02.png"
+import RentwiseLow3 from "../assets/rentwise/low-fidelity/low-03.png"
+import RentwiseLow4 from "../assets/rentwise/low-fidelity/low-04.jpg"
+import RentwiseLow5 from "../assets/rentwise/low-fidelity/low-05.png"
+import RentwiseLow6 from "../assets/rentwise/low-fidelity/low-06.png"
+import RentwiseLow7 from "../assets/rentwise/low-fidelity/low-07.png"
+
+// Rentwise mockups
+import RentwiseMockup1 from '../assets/rentwise/mockups/iphone14-mockups.png';
+import RentwiseMockup2 from '../assets/rentwise/mockups/iphone15.png';
+import RentwiseMockup3 from '../assets/rentwise/mockups/realme-12.png';
 
 
 
@@ -49,7 +78,6 @@ export const portfolioData = [
     id: "dixanafterschool",
     title: "Dixan After-School Program",
     heroImage: DixanAfterSchool,
-    
     overview: {
         duration: "January 2025 - April 2025",
         summary: "A mobile-first platform that empowers parents, especially working professionals and individuals with accessibility needs, to register, schedule, and manage after-school care for their children with ease - as simple as ordering a ride.",
@@ -416,6 +444,11 @@ export const portfolioData = [
             ]
         },
 
+        empathyMap: {
+            description: "Below is the empathy map for this client's target audience.",
+            image: RentWiseEmpathyMap
+        },
+
         userResearch: {
             summary: "Interviews and surveys were conducted across Lagos, Abuja, and Port Harcourt. While initial assumptions pointed to fraud and hidden costs, deeper insights revealed pain points such as landlord reluctance to adopt tech and emotional exhaustion from navigating scattered platforms.",
             painPoints: [
@@ -481,24 +514,26 @@ export const portfolioData = [
 
         designProcess: {
             storyboard: {
-                description: "The storyboard captures Chinedu’s end-to-end rental experience, from discovering RentWise to successfully renting a home, visually mapping emotional highs and lows.",
+                description: "The user flow captures Chinedu’s end-to-end rental experience, from discovering RentWise to successfully renting a home, visually mapping emotional highs and lows.",
                 images: [
-                    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&fit=cover&auto=format&q=80&sat=100",
-                    "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800&fit=cover&auto=format&q=80&sat=100"
+                    RentWiseUserFlow
                 ]
+            },
+            informationArchitecture: {
+                description: "This covers the information architecture for this app.",
+                image: RentWiseInformationArchitecture
             },
             paperWireframes: {
                 description: "Initial sketches focused on homepage and listings, exploring layouts with collapsed clutter, CTA clarity, and trust signals like verification badges.",
-                images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
+                images: [RentwiseLow2, RentwiseLow3, RentwiseLow4, RentwiseLow5, RentwiseLow6, RentwiseLow7]
             },
-            digitalWireframes: {
-                description: "Brought early ideas to life using Balsamiq and Figma, showing key tenant and landlord flows, while exploring layout responsiveness and element hierarchy.",
-                images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
-            },
+            // digitalWireframes: {
+            //     description: "Brought early ideas to life using Balsamiq and Figma, showing key tenant and landlord flows, while exploring layout responsiveness and element hierarchy.",
+            //     images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
+            // },
             lowFidelityPrototype: {
                 description: "Tenants could search, filter, and book rentals. Landlords could onboard listings. The prototype tested scrollability, icon use, and core navigation.",
                 link: "https://www.figma.com/proto/rentwise-lowfi",
-                images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
             }
         },
 
@@ -545,15 +580,32 @@ export const portfolioData = [
             ]
         },
 
-        refinedDesigns: {
-            description: "Based on testing feedback, we introduced sticky filters, simplified iconography, a Favorites section, and supportive onboarding with visual cues.",
-            images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
-        },
+        // refinedDesigns: {
+        //     description: "Based on testing feedback, we introduced sticky filters, simplified iconography, a Favorites section, and supportive onboarding with visual cues.",
+        //     images: [RentWiseMain || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100"]
+        // },
 
         highFidelityPrototype: {
             description: "Final designs featured verified badges, flexible booking CTAs, a clean dashboard for both users, and accessible landlord listing options.",
             link: "https://www.figma.com/proto/Li9mXcpNjhupBAUEkgvKtr/Rent-Wise?node-id=753-15770&t=7xcFM9lqtWTNHUqV-0&scaling=scale-down&content-scaling=fixed&page-id=3%3A29&starting-point-node-id=302%3A1802&show-proto-sidebar=1",
-            screenshot: "https://www.figma.com/proto/Li9mXcpNjhupBAUEkgvKtr/Rent-Wise?node-id=753-15770&t=7xcFM9lqtWTNHUqV-0&scaling=scale-down&content-scaling=fixed&page-id=3%3A29&starting-point-node-id=302%3A1802&show-proto-sidebar=1"
+            images: [
+                RentWiseHiFiChat,
+                RentWiseHiFiContactOwner,
+                RentWiseHiFiDashboardProperty,
+                RentWiseHiFiEReceipt,
+                RentWiseHiFiProfile,
+                RentWiseHiFiPropertyDetails,
+                RentWiseHiFiPropertyListings,
+                RentWiseHiFiRecentMaintainance,
+                RentWiseHiFiRentProperty,
+                RentWiseHiFiScheduleInspection,
+                RentWiseHiFiSettings
+            ]
+        },
+
+        mockups: {
+            description: "Mockups after final design was completed.",
+            images: [RentwiseMockup1, RentwiseMockup2, RentwiseMockup3]
         },
 
         accessibilityConsiderations: [
