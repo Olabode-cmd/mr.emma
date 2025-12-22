@@ -41,7 +41,8 @@ const HeroSection = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
         <div className="md:max-w-3xl">
-          <h1 className="text-5xl md:text-7xl font-semibold mb-4  lowercase">
+          <h1 className="text-gray-800 text-2xl mb-4">Hello. I'm Emmanuel John and I am an experienced...</h1>
+          <h1 className="text-4xl md:text-6xl font-semibold mb-4 lowercase">
             <span className="block">
               <ReactTyped
                 strings={userData.displayPositions}
@@ -52,10 +53,13 @@ const HeroSection = () => {
               />
             </span>
           </h1>
-          <p className="text-lg md:text-2xl text-gray-700 mb-12">
+          <p className="text-lg md:text-2xl text-gray-700 mt-4 mb-8">
             with a passion for creating thoughtful and visually stunning digital
             experiences.
           </p>
+          <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+            Download CV
+          </button>
         </div>
       </div>
     </div>

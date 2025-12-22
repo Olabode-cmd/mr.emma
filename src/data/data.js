@@ -9,12 +9,11 @@ export const userData = {
         "Design System Specialist",
         "Creative Strategist",
         "User Researcher",
-        "Experience Architect",
     ],
     bio: "Passionate about crafting intuitive and engaging digital experiences that bridge the gap between users and technology. With a focus on user-centered design, I help brands bring their visions to life.",
     yearsOfExperience: 3,
     projectsCompleted: 18,
-    contactEmail: "naomi@example.com",
+    contactEmail: "nueljohn@gmail.com",
     location: "Lagos, Nigeria",
     socials: {
         linkedin: "https://www.linkedin.com/in/john-emmanuel-3327a11a1",

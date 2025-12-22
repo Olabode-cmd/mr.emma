@@ -33,19 +33,21 @@ const AboutHeroSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              SAY GOODBYE TO GUESSWORK
-            </h1>
-            <h2 className="text-2xl font-bold mb-4">WELCOME TO THE SCIENCE AND ART OF HUMAN-CENTERED DESIGN</h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              I believe great design starts with empathy and ends with measurable impact. Dive into my portfolio, and you’ll see how I blend research, design thinking, and aesthetic precision to create meaningful digital experiences. But first, here’s a glimpse into who I am.
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+              I'm Emmanuel John, a UI/UX & Product Designer based in Lagos,
+              Nigeria, with 3+ years of experience designing web and mobile
+              products across education, SaaS, and service platforms.
             </p>
-            <div className="grid grid-cols-2 gap-8 mb-8">
-              <div>
-                <p className="text-4xl font-bold text-purple-600">3+</p>
-                <p className="text-gray-600">Years of Experience</p>
-              </div>
-            </div>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+              I combine UX research, interaction design, and clean visual
+              systems to help teams ship products that are not only beautiful,
+              but usable, accessible, and easy to maintain.
+            </p>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
+              Currently, I design experiences at Digital Fortress LTD, and I've
+              previously worked on admin tools, mobile apps, and digital
+              platforms for teams like Verbum Dei Academy and other startups.
+            </p>
           </div>
           <div className="flex justify-center">
             <div className="relative">
@@ -137,20 +139,23 @@ const ExpertiseSection = () => (
       <div className="space-y-12">
         <div>
           <h3 className="text-2xl font-bold mb-2">UX DESIGN</h3>
+          <p className="text-purple-600 font-medium mb-2">User flows, IA, prototypes, usability feedback.</p>
           <h4 className="text-lg font-semibold mb-2">CRAFTING INTENTIONAL EXPERIENCES BACKED BY STRATEGY</h4>
           <p className="text-gray-700 mb-4">
-            With over 3 years of experience in product design, I specialize in transforming real-world problems into elegant digital solutions. From mobile to web, I’ve designed across domains with one goal in mind: designing with purpose. My strength lies in creating user experiences that not only look and feel right — but perform.
+            With over 3 years of experience in product design, I specialize in transforming real-world problems into elegant digital solutions. From mobile to web, I've designed across domains with one goal in mind: designing with purpose. My strength lies in creating user experiences that not only look and feel right — but perform.
           </p>
         </div>
         <div>
           <h3 className="text-2xl font-bold mb-2">INTERACTION DESIGN</h3>
+          <p className="text-purple-600 font-medium mb-2">Microinteractions, transitions, state handling.</p>
           <h4 className="text-lg font-semibold mb-2">BECAUSE USER FLOWS SHOULD NEVER FEEL LIKE MAZES</h4>
           <p className="text-gray-700 mb-4">
-            I obsess over how users move through digital interfaces. Whether it’s tapping, scrolling, swiping, or pausing — every micro-movement matters. I bring clarity to complex interactions through intuitive flows and responsive feedback, ensuring users always know where they are and where they’re going.
+            I obsess over how users move through digital interfaces. Whether it's tapping, scrolling, swiping, or pausing — every micro-movement matters. I bring clarity to complex interactions through intuitive flows and responsive feedback, ensuring users always know where they are and where they're going.
           </p>
         </div>
         <div>
           <h3 className="text-2xl font-bold mb-2">VISUAL DESIGN</h3>
+          <p className="text-purple-600 font-medium mb-2">Layout, grids, typography, color systems, responsive UI.</p>
           <h4 className="text-lg font-semibold mb-2">FUNCTION MEETS FORM IN A BALANCED DANCE</h4>
           <p className="text-gray-700 mb-4">
             Great visuals do more than catch the eye — they guide behavior. I create clean, purposeful visuals that elevate usability. My approach is grounded in visual hierarchy, consistency, and brand alignment, blending aesthetic intelligence with user psychology. Every pixel has a job to do.
@@ -158,9 +163,10 @@ const ExpertiseSection = () => (
         </div>
         <div>
           <h3 className="text-2xl font-bold mb-2">UX RESEARCH</h3>
+          <p className="text-purple-600 font-medium mb-2">Interviews, surveys, usability tests, insight synthesis.</p>
           <h4 className="text-lg font-semibold mb-2">ASKING THE RIGHT QUESTIONS TO UNCOVER THE REAL NEEDS</h4>
           <p className="text-gray-700 mb-4">
-            I don’t guess — I gather. Through interviews, usability tests, surveys, and field research, I uncover insights that drive evidence-based design. Whether it's identifying friction points or validating design decisions, I ensure the user’s voice is embedded into every phase of the product lifecycle. Research is where I start, and often where I return to iterate and improve.
+            I don't guess — I gather. Through interviews, usability tests, surveys, and field research, I uncover insights that drive evidence-based design. Whether it's identifying friction points or validating design decisions, I ensure the user's voice is embedded into every phase of the product lifecycle. Research is where I start, and often where I return to iterate and improve.
           </p>
         </div>
       </div>
@@ -172,10 +178,10 @@ const CollaborationSection = () => (
   <div className="bg-white py-20">
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <p className="text-xl text-gray-700 mb-6">
-        I’m passionate about working with teams that value clarity, collaboration, and curiosity. Whether you need someone to lead user discovery, map interaction flows, or craft a clean, pixel-perfect UI — I’m ready to partner with you.
+        I'm passionate about working with teams that value clarity, collaboration, and curiosity. Whether you need someone to lead user discovery, map interaction flows, or craft a clean, pixel-perfect UI — I'm ready to partner with you.
       </p>
       <p className="text-xl text-gray-700 mb-8">
-        Let’s create something that works beautifully and feels effortless.
+        Let's create something that works beautifully and feels effortless.
       </p>
     </div>
   </div>

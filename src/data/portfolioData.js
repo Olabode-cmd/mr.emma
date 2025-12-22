@@ -78,6 +78,7 @@ export const portfolioData = [
     id: "dixanafterschool",
     title: "Dixan After-School Program",
     heroImage: DixanAfterSchool,
+    roleInfo: "Role: Lead UX Designer · Focus: Accessibility & mobile-first enrollment",
     overview: {
         duration: "January 2025 - April 2025",
         summary: "A mobile-first platform that empowers parents, especially working professionals and individuals with accessibility needs, to register, schedule, and manage after-school care for their children with ease - as simple as ordering a ride.",
@@ -264,9 +265,10 @@ export const portfolioData = [
     }
 },
 {
-    id: "verbumdei_ui_admin",
-    title: "Verbum Dei Academy Admin Portal",
-    heroImage: VerbumDeiPortalCover,
+    id: "rentwise",
+    title: "RentWise - Simplifying Home Rentals for Nigerians",
+    heroImage: RentWiseHero,
+    roleInfo: "Role: UX Designer · Focus: Trust & fraud reduction in rentals",
     
     overview: {
         duration: "September 2024 – January 2025",
@@ -413,6 +415,7 @@ export const portfolioData = [
         id: "rentwise",
         title: "RentWise - Simplifying Home Rentals for Nigerians",
         heroImage: RentWiseHero,
+        roleInfo: "Role: UX Designer · Focus: Trust & fraud reduction in rentals",
 
         overview: {
             duration: "August 2024 - December 2024",
@@ -640,6 +643,7 @@ export const portfolioData = [
         id: "freshmclean",
         title: "FreshMclean",
         heroImage: FreshMclean,
+        roleInfo: "Role: Product UI/UX Designer · Focus: Booking flows & service marketplace",
 
         overview: {
             duration: "4 months",
