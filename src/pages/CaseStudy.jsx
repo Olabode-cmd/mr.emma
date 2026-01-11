@@ -1318,17 +1318,36 @@ const CaseStudy = () => {
                         {project.usabilityStudy.findings.map((finding, i) => (
                           <div
                             key={i}
-                            className="flex flex-col items-center text-center p-6 bg-blue-50 rounded-full shadow-md hover:shadow-xl transition-shadow duration-300"
+                            className="flex flex-col items-center text-center p-6 bg-blue-50 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"
                           >
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-blue-200 text-blue-800 font-bold text-xl mb-4">
                               {i + 1}
                             </div>
-                            <h4 className="font-semibold text-blue-900 mb-2">
+                            <h4 className="font-semibold text-blue-900 mb-3">
                               {finding.title}
                             </h4>
-                            <p className="text-gray-700 text-sm">
-                              {finding.description}
-                            </p>
+                            {finding.issue && (
+                              <div className="mb-3">
+                                <h5 className="font-medium text-red-600 text-sm mb-1">Issue:</h5>
+                                <p className="text-gray-700 text-sm">
+                                  {finding.issue}
+                                </p>
+                              </div>
+                            )}
+                            {finding.designChange && (
+                              <div>
+                                <h5 className="font-medium text-green-600 text-sm mb-1">Design Change:</h5>
+                                <p className="text-gray-700 text-sm">
+                                  {finding.designChange}
+                                </p>
+                              </div>
+                            )}
+                            {/* Fallback for old format */}
+                            {!finding.issue && !finding.designChange && finding.description && (
+                              <p className="text-gray-700 text-sm">
+                                {finding.description}
+                              </p>
+                            )}
                           </div>
                         ))}
                       </div>

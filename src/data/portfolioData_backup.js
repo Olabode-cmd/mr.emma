@@ -80,7 +80,7 @@ export const portfolioData = [
     heroImage: DixanAfterSchool,
     roleInfo: "Role: Lead UX Designer · Focus: Accessibility & mobile-first enrollment",
     overview: {
-        duration: "Jan 2025 – Apr 2025",
+        duration: "January 2025 - April 2025",
         summary: "A mobile-first platform that empowers parents, especially working professionals and individuals with accessibility needs, to register, schedule, and manage after-school care for their children with ease - as simple as ordering a ride.",
         project: "It started with a simple question: What if busy parents could enroll their kids in after-school programs as easily as ordering a ride? The Dixan After-School Program app was designed to bring that convenience to life—empowering parents, especially working professionals and individuals with accessibility needs, to register, schedule, and manage after-school care from their phones.",
         problem: "Samantha, a marketing manager and single mom of two, was juggling work deadlines and childcare logistics. Each day ended in stress—endless paperwork, vague program details, and worries about her daughter's safety. She wasn't alone. Dozens of parents shared this same frustration. The current process was outdated and overwhelming. ",
@@ -275,17 +275,17 @@ export const portfolioData = [
         roleInfo: "Role: UX Designer · Focus: Trust & fraud reduction in rentals",
 
         overview: {
-            duration: "Aug 2024 – Dec 2024",
+            duration: "August 2024 - December 2024",
             summary: "A digital platform built to simplify the rental process for Nigerians by eliminating fraud, unnecessary agent fees, and scattered information—empowering both tenants and landlords to connect directly and securely.",
             project: "The RentWise project began with one goal: to solve the stress of home renting in Nigeria. Inspired by Chinedu's real-world struggles, the platform was designed to provide verified listings, remove reliance on agents, and support landlords through a tech-light onboarding process.",
-            problem: "Renting in Lagos is chaotic for first-time tenants like Chinedu: fake listings, hidden fees, unverified agents, and scattered information turn the search for a home into a stressful, expensive maze. We needed a trust-first, digital rental experience that cuts through scams, reduces unnecessary agent dependency, and supports both tenants and non–tech-savvy landlords.",
+            problem: `In the heart of Lagos, renting a home is often more stressful than it should be. Chinedu, a 29-year-old civil engineer, thought he was prepared for the apartment hunt. But what he encountered was a maze of fake listings, hidden charges, and unresponsive agents. Each new lead came with uncertainty—and unexpected costs like agency and legal fees that pushed the price far beyond his budget.\nChinedu’s story is far too common. For many tenants in Lagos, the rental process is overwhelming and emotionally draining. Information is scattered, communication is slow, and the involvement of multiple intermediaries only adds to the confusion and cost. What should be a straightforward search for a home becomes a frustrating, time-consuming ordeal.\nThe current system fails renters. It lacks transparency, efficiency, and trust. What’s urgently needed is a digital-first, user-friendly solution that simplifies the rental journey—cutting through the noise, reducing costs, and helping people like Chinedu find a home without the stress.`,
             goal: "Create a user-friendly, trustworthy, and secure rental platform that simplifies property searches, builds trust with verified listings, and supports landlords unfamiliar with digital tools."
         },
         prdLink: "https://docs.google.com/document/d/1mcvaDsPO6G6aGa_84oKrs1RtZzBj0CnbYvSuqXAZaMg/edit?usp=sharing",
         userStories: [
             {
                 title: "User Story 1 – The Budget-Conscious Tenant",
-                description: "As a first-time renter in Lagos with a limited monthly income, I want to quickly find verified listings within my budget so that I don't waste time on scams or over-priced apartments."
+                description: "As a first-time renter in Lagos with a limited monthly income, I want to quickly find verified listings within my budget so that I don’t waste time on scams or over-priced apartments."
             },
             {
                 title: "User Story 2 – The Pet Owner and Working Professional",
@@ -349,12 +349,12 @@ export const portfolioData = [
             ],
             userJourneyMap: {
                 image: RentWiseUserJourney || "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&fit=cover&auto=format&q=80&sat=100",
-                description: "The map tracks Chinedu's emotional and practical journey from beginning his search to securing a rental—highlighting friction points and moments of opportunity."
+                description: "The map tracks Chinedu’s emotional and practical journey from beginning his search to securing a rental—highlighting friction points and moments of opportunity."
             },
             howMightWeStatements: [
                 "How might we help Chinedu quickly identify trusted listings?",
                 "How might we reduce his reliance on agents?",
-                "How might we support landlords who aren't tech-savvy?",
+                "How might we support landlords who aren’t tech-savvy?",
                 "How might we centralize rental information for transparency and ease?"
             ],
             images: [RentWiseStoryboard1, RentWiseStoryboard2]
@@ -374,7 +374,7 @@ export const portfolioData = [
 
         designProcess: {
             storyboard: {
-                description: "The user flow captures Chinedu's end-to-end rental experience, from discovering RentWise to successfully renting a home, visually mapping emotional highs and lows.",
+                description: "The user flow captures Chinedu’s end-to-end rental experience, from discovering RentWise to successfully renting a home, visually mapping emotional highs and lows.",
                 images: [
                     RentWiseUserFlow
                 ]
@@ -423,23 +423,19 @@ export const portfolioData = [
             findings: [
                 {
                     title: "Missed Filter Bar",
-                    issue: "Users ignored the filters at the top of the listings page.",
-                    designChange: "Introduced a sticky filter bar that stays visible while scrolling and added clearer labels."
+                    description: "Users overlooked filters, so a sticky bar was introduced to improve visibility."
                 },
                 {
                     title: "Too Many Icons",
-                    issue: "Too many icons made the UI feel noisy and confusing.",
-                    designChange: "Simplified icon usage and leaned more on text labels and clear section headings."
+                    description: "Users were confused by excessive icons—simplified design followed."
                 },
                 {
                     title: "Favorite Listings",
-                    issue: "Tenants wanted to save listings to review later.",
-                    designChange: "Added a Favorites feature so renters can bookmark and compare properties."
+                    description: "Users wanted to save listings for later—'Favorites' feature was added."
                 },
                 {
                     title: "Landlord Onboarding",
-                    issue: "Landlords felt lost in the listing creation flow.",
-                    designChange: "Added a step-by-step progress indicator and clearer grouping of form fields."
+                    description: "Landlords felt unsure of what steps to take—progress indicators were implemented."
                 }
             ]
         },
@@ -492,7 +488,7 @@ export const portfolioData = [
 
         conclusion: {
             summary: "RentWise turned a common frustration into a seamless digital experience—empowering Nigerian renters and landlords to connect directly and securely without intermediaries or scams.",
-            connect: "Want to collaborate or explore UX challenges in real estate or emerging markets? Let's connect.",
+            connect: "Want to collaborate or explore UX challenges in real estate or emerging markets? Let’s connect.",
             contact: {
                 email: "emmanuel.john@example.com",
                 behance: "https://www.behance.net/216671761/RentWise",
