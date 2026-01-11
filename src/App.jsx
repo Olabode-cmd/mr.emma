@@ -57,9 +57,13 @@ const HeroSection = () => {
             with a passion for creating thoughtful and visually stunning digital
             experiences.
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+          <a 
+            href="/cv.pdf" 
+            download="Emmanuel_John_CV.pdf"
+            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+          >
             Download CV
-          </button>
+          </a>
         </div>
       </div>
     </div>

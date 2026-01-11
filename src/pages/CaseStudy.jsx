@@ -99,19 +99,31 @@ const CaseStudy = () => {
                 <div>
                   <div className="bg-gray-50 p-8 rounded-xl">
                     <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                      Project Details
+                      Project at a Glance
                     </h3>
                     <div className="space-y-4">
                       <div>
-                        <p className="text-sm text-gray-500">Duration</p>
+                        <p className="text-sm text-gray-500 mb-1">Product</p>
+                        <p className="text-gray-900 font-medium text-sm">
+                          {project.overview.summary}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500 mb-1">Role</p>
+                        <p className="text-gray-900 font-medium">
+                          {project.role.title}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500 mb-1">Timeline</p>
                         <p className="text-gray-900 font-medium">
                           {project.overview.duration}
                         </p>
                       </div>
                       <div>
-                        <p className="text-sm text-gray-500">Role</p>
+                        <p className="text-sm text-gray-500 mb-1">Focus</p>
                         <p className="text-gray-900 font-medium">
-                          {project.role.title}
+                          {project.roleInfo.split('·')[1]?.trim() || 'User experience and design'}
                         </p>
                       </div>
                     </div>

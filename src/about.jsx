@@ -13,6 +13,7 @@ const AboutPage = () => {
         <ExpertiseSection />
         <SkillsSection />
         <CollaborationSection />
+        <NowNextSection />
         <EducationCertSection />
       </main>
       <Footer />
@@ -183,6 +184,30 @@ const CollaborationSection = () => (
       <p className="text-xl text-gray-700 mb-8">
         Let's create something that works beautifully and feels effortless.
       </p>
+    </div>
+  </div>
+);
+
+const NowNextSection = () => (
+  <div className="bg-gray-50 py-16">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Now / Next</h2>
+        <div className="w-24 h-1 bg-purple-600 mx-auto"></div>
+      </div>
+      <div className="bg-white p-8 rounded-lg shadow-sm">
+        <h3 className="text-xl font-semibold mb-4">Currently open to</h3>
+        <ul className="space-y-3 text-gray-700">
+          <li className="flex items-start">
+            <span className="text-purple-600 mr-3">•</span>
+            UI/UX or Product Design roles (onsite/hybrid/remote)
+          </li>
+          <li className="flex items-start">
+            <span className="text-purple-600 mr-3">•</span>
+            Freelance/product collaborations in edtech, marketplaces, and SaaS
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 );

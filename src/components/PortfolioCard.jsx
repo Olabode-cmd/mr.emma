@@ -17,16 +17,16 @@ const PortfolioCard = ({ project, isReversed }) => {
           {project.projectType}
         </span> */}
 
-        <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">
+        <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors duration-300">
           {project.title}
         </h3>
 
-        <p className="text-gray-600 text-sm md:text-lg leading-6 md:leading-8 mb-4">
-          {project.overview.summary}
+        <p className="text-purple-600 font-medium text-sm mb-4">
+          {project.roleInfo}
         </p>
 
-        <p className="text-purple-600 font-medium text-sm mb-8">
-          {project.roleInfo}
+        <p className="text-gray-600 text-sm md:text-lg leading-6 md:leading-8 mb-8">
+          {project.overview.summary}
         </p>
 
         <Link
