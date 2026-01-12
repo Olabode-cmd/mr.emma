@@ -123,7 +123,7 @@ const CaseStudy = () => {
                       <div>
                         <p className="text-sm text-gray-500 mb-1">Focus</p>
                         <p className="text-gray-900 font-medium">
-                          {project.roleInfo.split('·')[1]?.trim() || 'User experience and design'}
+                          {project.roleInfo?.split('·')[1]?.trim() || 'User experience and design'}
                         </p>
                       </div>
                     </div>
